@@ -1,7 +1,7 @@
 (function (App) {
     'use strict';
 
-    var torrentHealth = require('torrent-tracker-health-ce');
+    var torrentHealth = require('torrent-tracker-health');
     var cancelTorrentHealth = function () {};
     var torrentHealthRestarted = null;
 

@@ -269,13 +269,13 @@
                 case 'minimizeToTray':
                 case 'bigPicture':
                 case 'activateTorrentCollection':
-                /*case 'activateFavorites':
+                case 'activateFavorites':
                  value = field.is(':checked');
-                 break;*/
+                 break;
                 case 'activateWatchlist':
-                /*case 'activateRandomize':
+                case 'activateRandomize':
                  value = field.is(':checked');
-                 break;*/
+                 break;
                 case 'httpApiUsername':
                 case 'httpApiPassword':
                     apiDataChanged = true;
