@@ -28,6 +28,7 @@
             'click .movie-googlevideo-link': 'openGooglevideo',
             'click .movie-tmdb-link': 'openTmdb',
             'click .movie-bh-link': 'openBh',
+            'click .movie-opensubtitles-link': 'openOpensubtitles',
             'mousedown .magnet-link': 'openMagnet',
             'click .sub-dropdown': 'toggleDropdown',
             'click .sub-flag-icon': 'closeDropdown',
@@ -456,11 +457,13 @@
         }, openYoutube: function () {
             gui.Shell.openExternal(this.model.get('trailer'));
         }, openTmdb: function () {
-            gui.Shell.openExternal('http://www.themoviedb.org');
+            gui.Shell.openExternal('http://www.themoviedb.org/');
         }, openBh: function () {
             gui.Shell.openExternal('http://bithumen.be/details.php?id=' + this.model.get('id'));
+        }, openOpensubtitles: function () {
+            gui.Shell.openExternal('http://opensubtitles.org/');
         },
-
+        
         openMagnet: function (e) {
             var provider = this.model.get('provider'),
                 torrent = this.model.get('torrents')[this.model.get('quality')],
