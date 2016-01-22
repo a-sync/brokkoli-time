@@ -72,7 +72,7 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
                 <div class="movie-googlevideo-link provider" data-placement="bottom" title="cloud src">googlecloud / </div>
                 <div class="movie-youtube-link provider" data-placement="bottom" title="youtube.com">youtube / </div>
                 <div class="movie-tmdb-link provider" data-placement="bottom" title="themoviedb.org">themoviedb / </div>
-                <div class="movie-bh-link provider" data-placement="bottom" title="bithumen.be">bitHUmen / </div>
+                <div class="movie-bh-link provider" data-placement="bottom" title="bithumen.be">bitHUmen </div>
             </div>
 	    </div>
     </div>
