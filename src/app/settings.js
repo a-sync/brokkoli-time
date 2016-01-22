@@ -81,7 +81,7 @@ Settings.bigPicture = false;
 // Features
 Settings.activateTorrentCollection = false;
 Settings.activateWatchlist = false;
-//Settings.activateFavorites = true;
+Settings.activateFavorites = true;
 Settings.activateVpn = false;
 Settings.activateRandomize = false;
 Settings.onlineSearchEngine = 'KAT';
