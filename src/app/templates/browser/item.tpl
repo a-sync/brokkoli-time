@@ -42,7 +42,7 @@
     	<%} %>
 	<%} %>	
 
-    <% if (typeof year !== 'undefined') {%>
+    <% if (typeof year !== 'undefined' && year != 0) {%>
         <%= year %>
     <%} %>
 </p>

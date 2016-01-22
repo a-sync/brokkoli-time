@@ -7,9 +7,11 @@
 
         <div class="title-version">
             <a data-toggle="tooltip" data-placement="top" title=<%= i18n.__("Changelog") %> id='changelog'><%= App.settings.version %> "<%= App.settings.releaseName %>" Beta </a>
+<!--
             <% if(App.git) { %>
-                - <small><i><%= App.git.branch %> (<a class="links" href="https://git.popcorntime.ag/popcorntime-ce/desktop/commit/<%= App.git.commit %>"><%= App.git.commit.slice(0,8) %></a>)</i></small>
+                - <small><i><%= App.git.branch %> (<a class="links" href="https://google.com/commit/<%= App.git.commit %>"><%= App.git.commit.slice(0,8) %></a>)</i></small>
             <% } %>
+-->
         </div>
 <!--
         <div class="title-issue">
@@ -24,15 +26,15 @@
         </div>
 
         <div class="icons_social">
-            <a href='http://popcorntime.ag/' data-toggle="tooltip" data-placement="top" title="popcorntime.ag" class='links site_icon'></span></a>
+            <a href='http://google.com/' data-toggle="tooltip" data-placement="top" title="google.com" class='links site_icon'></span></a>
 
-            <a href='http://twitter.com/PopcornTime_CE' data-toggle="tooltip" data-placement="top" title="twitter.com/PopcornTime_CE" class='links twitter_icon'></span></a>
+            <a href='http://twitter.com/BrokkoliTime' data-toggle="tooltip" data-placement="top" title="twitter.com/BrokkoliTime" class='links twitter_icon'></span></a>
 
-		<a href='http://facebook.com/PopcornTimeCE' data-toggle="tooltip" data-placement="top" title="facebook.com/PopcornTimeCE" class='links facebook_icon'></span></a>
+		<a href='http://facebook.com/' data-toggle="tooltip" data-placement="top" title="facebook.com/" class='links facebook_icon'></span></a>
 
-		<a href='http://github.com/PopcornTime_CE' data-toggle="tooltip" data-placement="top" title="github.com/PopcornTimeCE" class='links github_icon'></span></a>
+		<a href='http://github.com/' data-toggle="tooltip" data-placement="top" title="github.com/" class='links github_icon'></span></a>
 
-		<a href='http://reddit.com/PopcornTimeCE' data-toggle="tooltip" data-placement="top" title="reddit.com/PopcornTimeCE" class='links forum_icon'></span></a>
+		<a href='http://reddit.com/' data-toggle="tooltip" data-placement="top" title="reddit.com/" class='links forum_icon'></span></a>
         </div>
 
         <div class="last-line">
