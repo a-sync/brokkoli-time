@@ -14,13 +14,13 @@ Settings.coversShowRating = true;
 Settings.watchedCovers = 'fade';
 Settings.showAdvancedSettings = false;
 
-Settings.postersMinWidth = 134;
-Settings.postersMaxWidth = 294;
+Settings.postersMinWidth = 142;
+Settings.postersMaxWidth = 342;
 Settings.postersMinFontSize = 0.8;
 Settings.postersMaxFontSize = 1.3;
-Settings.postersSizeRatio = (196 / 134);
+Settings.postersSizeRatio = (513 / 342);
 Settings.postersWidth = Settings.postersMinWidth;
-Settings.postersJump = [134, 154, 174, 194, 214, 234, 254, 274, 294];
+Settings.postersJump = [142, 162, 182, 202, 222, 242, 262, 282, 302, 322, 342];
 
 //Playback
 Settings.alwaysFullscreen = false;
@@ -37,7 +37,7 @@ Settings.lastTab = '';
 // Quality
 Settings.shows_default_quality = '720p';
 Settings.movies_default_quality = '720p';
-Settings.moviesShowQuality = true;
+Settings.moviesShowQuality = false;
 Settings.movies_quality = 'all';
 //Settings.moviesShowGooglecloud = true;
 
@@ -60,8 +60,8 @@ Settings.traktTokenTTL = '';
 Settings.traktTvVersion = '0.0.2';
 Settings.traktLastSync = '';
 Settings.traktLastActivities = '';
-Settings.traktSyncOnStart = true;
-Settings.traktPlayback = true;
+Settings.traktSyncOnStart = false;
+Settings.traktPlayback = false;
 
 // TVShow Time
 Settings.tvstAccessToken = '';
@@ -70,7 +70,7 @@ Settings.tvstAccessToken = '';
 Settings.connectionLimit = 100;
 Settings.dhtLimit = 500;
 Settings.streamPort = 0; // 0 = Random
-Settings.tmpLocation = path.join(os.tmpDir(), 'Popcorn-Time');
+Settings.tmpLocation = path.join(os.tmpDir(), 'Brokkoli-Time');
 Settings.databaseLocation = path.join(data_path, 'data');
 Settings.deleteTmpOnClose = true;
 Settings.automaticUpdating = false;
@@ -108,24 +108,24 @@ Settings.tvAPI = [{
 Settings.ytsAPI = [{
     url: 'http://bigfathead.eu/kukorica/',
     strictSSL: true
-},{
+}/*,{
     url: 'http://yify.is/index.php/',
     strictSSL: true
 },{
     url: 'https://yts.ag/',
     strictSSL: true
-}];
+}*/];
 
 Settings.updateEndpoint = {
-    url: 'https://popcornbxexxf3bu.onion.to/',
+    url: '127.0.0.1',//'https://popcornbxexxf3bu.onion.to/',
     index: 0,
-    proxies: [{
+    proxies: [/*{
         url: 'https://popcornqbt6ktnfs.onion.to/',
         //fingerprint: '30:A6:BA:6C:19:A4:D5:C3:5A:E8:F1:56:C6:B4:E1:DC:EF:DD:EC:8C',
     }, {
         url: 'https://popcornd6v5duho3.onion.to/',
         //fingerprint: '30:A6:BA:6C:19:A4:D5:C3:5A:E8:F1:56:C6:B4:E1:DC:EF:DD:EC:8C',
-    }]
+    }*/]
 };
 
 // App Settings

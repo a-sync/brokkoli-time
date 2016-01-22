@@ -29,13 +29,13 @@
             return {
                 type: 'movie',
                 id: movie.id,
-		imdb_id: movie.imdb_code,
+                imdb_id: movie.imdb_code,
                 title: movie.title,
-		slug: movie.slug,
+                slug: movie.slug,
                 year: movie.year,
                 genre: movie.genres,
-		directors: movie.directors,
-		cast: movie.cast,
+                directors: movie.directors,
+                cast: movie.cast,
                 rating: movie.rating,
                 runtime: movie.runtime,
                 image: movie.medium_cover_image,
@@ -43,7 +43,7 @@
                 backdrop: movie.background_image,
                 synopsis: movie.synopsis, 
                 trailer: (movie.yt_trailer_code) ? 'https://www.youtube.com/watch?v='+movie.yt_trailer_code : false,
-		google_video: movie.google_video || false,
+                google_video: movie.google_video || false,
                 certification: movie.mpa_rating,
                 torrents: _.reduce(movie.torrents, function (torrents, torrent) {
                 
@@ -76,7 +76,6 @@
         var params = {
             sort_by: 'seeds',
             limit: 50,
-            with_rt_ratings: true
         };
 
         if (filters.page) {
@@ -123,6 +122,15 @@
             params.lang = Settings.language;
         }
 
+        if(/^[0-9a-f]{32}$/i.test(Settings.passkey))
+        {
+            params.cat = filters.type || 23;//19
+        }
+        else
+        {
+            params.with_rt_ratings = true;
+        }
+
         var defer = Q.defer();
 
         function get(index) {
@@ -135,7 +143,7 @@
             var req = jQuery.extend(true, {}, Settings.ytsAPI[index], options);
             request(req, function (err, res, data) {
                 if (err || res.statusCode >= 400 || (data && !data.data)) {
-                    win.warn('YTS API endpoint \'%s\' failed.', Settings.ytsAPI[index].url);
+                    win.warn('API endpoint \'%s\' failed.', Settings.ytsAPI[index].url);
                     if (index + 1 >= Settings.ytsAPI.length) {
                         return defer.reject(err || 'Status Code is above 400');
                     } else {

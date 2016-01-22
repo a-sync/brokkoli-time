@@ -88,8 +88,12 @@
             var category = $('.online-categories > select').val();
             AdvSettings.set('OnlineSearchCategory', category);
             if (category === 'TV Series') {
-                category = 'TV';
-            }
+		        category = 'tv';
+		    } else if (category === 'Movies') {
+ 				category = 'movies';
+ 			} else if (category === 'Anime') {
+ 				category = 'anime';
+ 			}
             var current = $('.onlinesearch-info > ul.file-list').html();
 
             if (input === '' && current === '') {
@@ -107,7 +111,7 @@
 
             if (this.searchEngine === 'KAT') {
 
-                var kat = require('kat-api');
+                var kat = require('kat-api-ce');
                 kat.search({
                     query: input,
                     min_seeds: 5,
@@ -206,7 +210,7 @@
             );
             if (item.seeds === 0) { // recalc the peers/seeds
                 var torrent = item.magnet.split('&tr')[0] + '&tr=udp://tracker.openbittorrent.com:80/announce' + '&tr=udp://open.demonii.com:1337/announce' + '&tr=udp://tracker.coppersurfer.tk:6969';
-                require('torrent-tracker-health')(torrent, {
+                require('torrent-tracker-health-ce')(torrent, {
                     timeout: 1000
                 }).then(function (res) {
                     //console.log('torrent index %s: %s -> %s (seeds)', item.index, item.seeds, res.seeds)

@@ -31,7 +31,7 @@
 	"Soap": "Szappanopera",
 	"Special Interest": "Speciális témák",
 	"Sport": "Sport",
-	"Suspense": "Felfüggeszés",
+	"Suspense": "Felfüggesztés",
 	"Talk Show": "Talk Show",
 	"Thriller": "Thriller",
 	"Western": "Western",
@@ -513,5 +513,13 @@
 	"rejtély": "rejtély",
 	"Passkey": "Passkey",
 	"Talkshow": "Talkshow",
-	"fantasztikus": "fantasztikus"
+	"fantasztikus": "fantasztikus",
+	"sport": "sport",
+	"sci-fi": "sci-fi",
+	"rövidfilm": "rövidfilm",
+	"családi": "családi",
+	"Game Show": "Game Show",
+	"dokumentum": "dokumentum",
+	"történelmi": "történelmi",
+	"western": "western"
 }
