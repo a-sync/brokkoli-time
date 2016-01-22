@@ -36,7 +36,7 @@
             'click #unauthTrakt': 'disconnectTrakt',
             'click #connect-with-tvst': 'connectWithTvst',
             'click #disconnect-tvst': 'disconnectTvst',
-	    'click .reset-ytsAPI': 'resetMovieAPI',
+            'click .reset-ytsAPI': 'resetMovieAPI',
             'click .reset-tvAPI': 'resetTVShowAPI',
             'change #tmpLocation': 'updateCacheDirectory',
             'click #syncTrakt': 'syncTrakt',
@@ -127,7 +127,7 @@
             App.vent.trigger('settings:close');
         },
 
-	resetMovieAPI: function () {
+        resetMovieAPI: function () {
             var value = [{
                 url: 'http://bigfathead.eu/kukorica/',
                 strictSSL: true
@@ -204,100 +204,100 @@
                 data = {};
 
             switch (field.attr('name')) {
-            case 'httpApiPort':
-                apiDataChanged = true;
-                value = parseInt(field.val());
-                break;
- 	   case 'ytsAPI':
-                value = field.val();
-                if (value.substr(-1) !== '/') {
-                    value += '/';
-                }
-                if (value.substr(0, 8) !== 'https://' && value.substr(0, 7) !== 'http://') {
-                    value = 'http://' + value;
-                }
-                value = [{
-                    url: value,
-                    strictSSL: value.substr(0, 8) === 'https://'
-                }];
-                break;
-           case 'tvAPI':
-                value = field.val();
-                if (value.substr(-1) !== '/') {
-                    value += '/';
-                }
-                if (value.substr(0, 8) !== 'https://' && value.substr(0, 7) !== 'http://') {
-                    value = 'http://' + value;
-                }
-                value = [{
-                    url: value,
-                    strictSSL: value.substr(0, 8) === 'https://'
-                }];
-                break;
-            case 'subtitle_size':
-            case 'tv_detail_jump_to':
-            case 'subtitle_language':
-            case 'subtitle_decoration':
-            case 'movies_quality':
-            case 'subtitle_font':
-            case 'start_screen':
-                if ($('option:selected', field).val() === 'Last Open') {
-                    AdvSettings.set('lastTab', App.currentview);
-                }
+                case 'httpApiPort':
+                    apiDataChanged = true;
+                    value = parseInt(field.val());
+                    break;
+                case 'ytsAPI':
+                    value = field.val();
+                    if (value.substr(-1) !== '/') {
+                        value += '/';
+                    }
+                    if (value.substr(0, 8) !== 'https://' && value.substr(0, 7) !== 'http://') {
+                        value = 'http://' + value;
+                    }
+                    value = [{
+                        url: value,
+                        strictSSL: value.substr(0, 8) === 'https://'
+                    }];
+                    break;
+                case 'tvAPI':
+                    value = field.val();
+                    if (value.substr(-1) !== '/') {
+                        value += '/';
+                    }
+                    if (value.substr(0, 8) !== 'https://' && value.substr(0, 7) !== 'http://') {
+                        value = 'http://' + value;
+                    }
+                    value = [{
+                        url: value,
+                        strictSSL: value.substr(0, 8) === 'https://'
+                    }];
+                    break;
+                case 'subtitle_size':
+                case 'tv_detail_jump_to':
+                case 'subtitle_language':
+                case 'subtitle_decoration':
+                case 'movies_quality':
+                case 'subtitle_font':
+                case 'start_screen':
+                    if ($('option:selected', field).val() === 'Last Open') {
+                        AdvSettings.set('lastTab', App.currentview);
+                    }
                 /* falls through */
-            case 'watchedCovers':
-            case 'theme':
-                value = $('option:selected', field).val();
-                break;
-            case 'language':
-                value = $('option:selected', field).val();
-                i18n.setLocale(value);
-                break;
-            case 'moviesShowQuality':
-	    //case 'moviesShowGooglecloud':
-            case 'deleteTmpOnClose':
-            case 'coversShowRating':
-            case 'translateSynopsis':
-            case 'showAdvancedSettings':
-            case 'alwaysOnTop':
-            case 'traktSyncOnStart':
-            case 'traktPlayback':
-            case 'playNextEpisodeAuto':
-            case 'automaticUpdating':
-            case 'events':
-            case 'alwaysFullscreen':
-            case 'minimizeToTray':
-            case 'bigPicture':
-            case 'activateTorrentCollection':
-	    /*case 'activateFavorites':
-    		value = field.is(':checked');
-                break;*/
-            case 'activateWatchlist':
-            case 'activateRandomize':
-                value = field.is(':checked');
-                break;
-            case 'httpApiUsername':
-            case 'httpApiPassword':
-                apiDataChanged = true;
-                value = field.val();
-                break;
-            case 'passkey':
-            case 'connectionLimit':
-            case 'dhtLimit':
-            case 'streamPort':
-            case 'subtitle_color':
-                value = field.val();
-                break;
-            case 'tmpLocation':
-                tmpLocationChanged = true;
-                value = path.join(field.val(), 'Popcorn-Time');
-                break;
-            case 'activateVpn':
-                $('.vpn-connect').toggle();
-                value = field.is(':checked');
-                break;
-            default:
-                win.warn('Setting not defined: ' + field.attr('name'));
+                case 'watchedCovers':
+                case 'theme':
+                    value = $('option:selected', field).val();
+                    break;
+                case 'language':
+                    value = $('option:selected', field).val();
+                    i18n.setLocale(value);
+                    break;
+                case 'moviesShowQuality':
+                //case 'moviesShowGooglecloud':
+                case 'deleteTmpOnClose':
+                case 'coversShowRating':
+                case 'translateSynopsis':
+                case 'showAdvancedSettings':
+                case 'alwaysOnTop':
+                case 'traktSyncOnStart':
+                case 'traktPlayback':
+                case 'playNextEpisodeAuto':
+                case 'automaticUpdating':
+                case 'events':
+                case 'alwaysFullscreen':
+                case 'minimizeToTray':
+                case 'bigPicture':
+                case 'activateTorrentCollection':
+                /*case 'activateFavorites':
+                 value = field.is(':checked');
+                 break;*/
+                case 'activateWatchlist':
+                /*case 'activateRandomize':
+                 value = field.is(':checked');
+                 break;*/
+                case 'httpApiUsername':
+                case 'httpApiPassword':
+                    apiDataChanged = true;
+                    value = field.val();
+                    break;
+                case 'passkey':
+                case 'connectionLimit':
+                case 'dhtLimit':
+                case 'streamPort':
+                case 'subtitle_color':
+                    value = field.val();
+                    break;
+                case 'tmpLocation':
+                    tmpLocationChanged = true;
+                    value = path.join(field.val(), 'Popcorn-Time');
+                    break;
+                case 'activateVpn':
+                    $('.vpn-connect').toggle();
+                    value = field.is(':checked');
+                    break;
+                default:
+                    win.warn('Setting not defined: ' + field.attr('name'));
             }
             win.info('Setting changed: ' + field.attr('name') + ' - ' + value);
 
@@ -327,100 +327,100 @@
 
         syncSetting: function (setting, value) {
             switch (setting) {
-            case 'coversShowRating':
-                if (value) {
-                    $('.rating').show();
-                } else {
-                    $('.rating').hide();
-                }
-                break;
-            case 'moviesShowQuality':
-                if (value) {
-                    $('.quality').show();
-                } else {
-                    $('.quality').hide();
-                }
-                break;
-            case 'showAdvancedSettings':
-                if (value) {
-                    $('.advanced').css('display', 'flex');
-                } else {
-                    $('.advanced').css('display', 'none');
-                }
-                break;
-            case 'language':
-            case 'watchedCovers':
-                App.vent.trigger('movies:list');
-                App.vent.trigger('settings:show');
-                break;
-            case 'alwaysOnTop':
-                win.setAlwaysOnTop(value);
-                break;
-            case 'theme':
-                $('link#theme').attr('href', 'themes/' + value + '.css');
-                App.vent.trigger('updatePostersSizeStylesheet');
-                break;
-            case 'start_screen':
-                AdvSettings.set('startScreen', value);
-                break;
-            case 'events':
-                if ($('.events').css('display') === 'none') {
-                    $('.events').css('display', 'block');
-                } else {
-                    $('.events').css('display', 'none');
-                }
-                break;
-            case 'activateTorrentCollection':
-                if ($('#torrent_col').css('display') === 'none') {
-                    $('#torrent_col').css('display', 'block');
-                } else {
-                    $('#torrent_col').css('display', 'none');
-                    App.vent.trigger('torrentCollection:close');
-                }
-                break;
-            case 'activateRandomize':
-            /*case 'activateFavorites':
-                App.vent.trigger('movies:list');
-                App.vent.trigger('settings:show');
-                break;*/
-	   case 'activateWatchlist':
-                App.vent.trigger('movies:list');
-                App.vent.trigger('settings:show');
-                break;
-            case 'movies_quality':
-            case 'translateSynopsis':
-                App.Providers.delete('Yts');
-                App.vent.trigger('movies:list');
-                App.vent.trigger('settings:show');
-                break;
-            case 'tvAPI':
-                App.Providers.delete('TVApi');
-                App.vent.trigger('movies:list');
-                App.vent.trigger('settings:show');
-                break;
-	    case 'ytsAPI':
-                App.Providers.delete('ytsAPI');
-                App.vent.trigger('movies:list');
-                App.vent.trigger('settings:show');
-                break;
-            case 'bigPicture':
-                if (!ScreenResolution.SD) {
-                    if (App.settings.bigPicture) {
-                        win.maximize();
-                        AdvSettings.set('noBigPicture', win.zoomLevel);
-                        var zoom = ScreenResolution.HD ? 2 : 3;
-                        win.zoomLevel = zoom;
+                case 'coversShowRating':
+                    if (value) {
+                        $('.rating').show();
                     } else {
-                        win.zoomLevel = AdvSettings.get('noBigPicture') || 0;
+                        $('.rating').hide();
                     }
-                } else {
-                    AdvSettings.set('bigPicture', false);
-                    win.info('Setting changed: bigPicture - true');
-                    $('input#bigPicture.settings-checkbox').attr('checked', false);
-                    $('.notification_alert').show().text(i18n.__('Big Picture Mode is unavailable on your current screen resolution')).delay(2500).fadeOut(400);
-                }
-                break;
-            default:
+                    break;
+                case 'moviesShowQuality':
+                    if (value) {
+                        $('.quality').show();
+                    } else {
+                        $('.quality').hide();
+                    }
+                    break;
+                case 'showAdvancedSettings':
+                    if (value) {
+                        $('.advanced').css('display', 'flex');
+                    } else {
+                        $('.advanced').css('display', 'none');
+                    }
+                    break;
+                case 'language':
+                case 'watchedCovers':
+                    App.vent.trigger('movies:list');
+                    App.vent.trigger('settings:show');
+                    break;
+                case 'alwaysOnTop':
+                    win.setAlwaysOnTop(value);
+                    break;
+                case 'theme':
+                    $('link#theme').attr('href', 'themes/' + value + '.css');
+                    App.vent.trigger('updatePostersSizeStylesheet');
+                    break;
+                case 'start_screen':
+                    AdvSettings.set('startScreen', value);
+                    break;
+                case 'events':
+                    if ($('.events').css('display') === 'none') {
+                        $('.events').css('display', 'block');
+                    } else {
+                        $('.events').css('display', 'none');
+                    }
+                    break;
+                case 'activateTorrentCollection':
+                    if ($('#torrent_col').css('display') === 'none') {
+                        $('#torrent_col').css('display', 'block');
+                    } else {
+                        $('#torrent_col').css('display', 'none');
+                        App.vent.trigger('torrentCollection:close');
+                    }
+                    break;
+                case 'activateRandomize':
+                /*case 'activateFavorites':
+                 App.vent.trigger('movies:list');
+                 App.vent.trigger('settings:show');
+                 break;*/
+                case 'activateWatchlist':
+                    App.vent.trigger('movies:list');
+                    App.vent.trigger('settings:show');
+                    break;
+                case 'movies_quality':
+                case 'translateSynopsis':
+                    App.Providers.delete('Yts');
+                    App.vent.trigger('movies:list');
+                    App.vent.trigger('settings:show');
+                    break;
+                case 'tvAPI':
+                    App.Providers.delete('TVApi');
+                    App.vent.trigger('movies:list');
+                    App.vent.trigger('settings:show');
+                    break;
+                case 'ytsAPI':
+                    App.Providers.delete('ytsAPI');
+                    App.vent.trigger('movies:list');
+                    App.vent.trigger('settings:show');
+                    break;
+                case 'bigPicture':
+                    if (!ScreenResolution.SD) {
+                        if (App.settings.bigPicture) {
+                            win.maximize();
+                            AdvSettings.set('noBigPicture', win.zoomLevel);
+                            var zoom = ScreenResolution.HD ? 2 : 3;
+                            win.zoomLevel = zoom;
+                        } else {
+                            win.zoomLevel = AdvSettings.get('noBigPicture') || 0;
+                        }
+                    } else {
+                        AdvSettings.set('bigPicture', false);
+                        win.info('Setting changed: bigPicture - true');
+                        $('input#bigPicture.settings-checkbox').attr('checked', false);
+                        $('.notification_alert').show().text(i18n.__('Big Picture Mode is unavailable on your current screen resolution')).delay(2500).fadeOut(400);
+                    }
+                    break;
+                default:
             }
         },
 
@@ -442,10 +442,10 @@
                         $('#authTrakt > i').css('visibility', 'visible');
                     }
                 }).catch(function (err) {
-                    win.debug('Trakt', err);
-                    $('#authTrakt > i').css('visibility', 'visible');
-                    $('.loading-spinner').hide();
-                });
+                win.debug('Trakt', err);
+                $('#authTrakt > i').css('visibility', 'visible');
+                $('.loading-spinner').hide();
+            });
         },
 
         disconnectTrakt: function (e) {

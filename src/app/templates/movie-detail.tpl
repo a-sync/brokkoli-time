@@ -1,7 +1,8 @@
 <%  
 if(typeof backdrop === "undefined"){ backdrop = ""; }; 
-if(typeof synopsis === "undefined"){ synopsis = "Synopsis not available."; }; 
-if(typeof runtime === "undefined"){ runtime = "N/A"; };
+if(typeof synopsis === "undefined"){ synopsis = i18n.__("Synopsis not available."); };
+if(typeof runtime === "undefined"){ runtime = i18n.__("N/A"); };
+if(year == 0){ year = ""; };
 for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
 %>
 
@@ -31,6 +32,7 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
             <div class="rating-container">
                 <div class="star-container" data-toggle="tooltip" data-placement="right" title="<%= rating %>/10">
                 <% var p_rating = Math.round(rating) / 2; %>
+
                    <% for (var i = 1; i <= Math.floor(p_rating); i++) { %>
                             <i class="fa fa-star rating-star"></i>
                         <% }; %>
@@ -43,33 +45,36 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
                         <% for (var i = Math.ceil(p_rating); i < 5; i++) { %>
                             <i class="fa fa-star rating-star-empty"></i>
                     <% }; %>
+
                 </div>
                 <div class="number-container hidden"><%= rating %> <em>/10</em></div>
             </div>
 
 	    <!--health, ratio-->
 	    <div data-toggle="tooltip" data-placement="left" title="<%=i18n.__("Health false") %>" class="fa fa-circle health-icon <%= health %>"></div>
-            <div data-toogle="tooltip" data-placement="left" title="<%=i18n.__("Magnet link") %>" class="fa fa-magnet magnet-link"></div>
+        <div data-toogle="tooltip" data-placement="left" title="<%=i18n.__("Magnet link") %>" class="fa fa-magnet magnet-link"></div>
             
         </div>
 
         <div class="overview" style="font-size:14px;">
-		<%= synopsis %>
+            <%= synopsis %>
 
-		<div style="margin-top:8px;"><div id="directors" style="color:#ccc; float:left; margin-right:5px;">Director:</div> <%= directors.join(" / ") %></div>
+            <div style="margin-top:8px;"><div id="directors" style="color:#ccc; float:left; margin-right:5px;">Director:</div> <%= directors.join(" / ") %></div>
 
-		<div style="margin-top:8px;"><div id="cast" style="color:#ccc; float:left; margin-right:5px;">Cast:</div> <%= cast.join(" / ") %></div>
+            <div style="margin-top:8px;"><div id="cast" style="color:#ccc; float:left; margin-right:5px;">Cast:</div> <%= cast.join(" / ") %></div>
 
-		<div style="height: 20px; color:#666; font-size:11px;">
-		<div id="resources" style="float:left; margin-right:5px;">Provider: </div>
-		<div class="movie-yify-link provider" data-placement="bottom" title="yify.is">yts / </div>
-		<div class="movie-video2k-link provider" data-placement="bottom" title="video2k.is">video2k / </div>
-		<div class="movie-imdbid-link provider" data-placement="bottom" title="imdb.com">imdb / </div>
-		<div class="movie-yifysubtitles-link provider" data-placement="bottom" title="yifysubtitles.com">yifysubtitles / </div>
-		<div class="movie-googlevideo-link provider" data-placement="bottom" title="cloud src">googlecloud / </div>
-		<div class="movie-youtube-link provider" data-placement="bottom" title="youtube.com">youtube</div>
-		</div>
-	</div>
+            <div style="margin-top: 20px; color:#666; font-size:11px;">
+                <div id="resources" style="float:left; margin-right:5px;"><%=i18n.__("Provider:") %> </div>
+                <div class="movie-yify-link provider" data-placement="bottom" title="yify.is">yts / </div>
+                <div class="movie-video2k-link provider" data-placement="bottom" title="video2k.is">video2k / </div>
+                <div class="movie-imdbid-link provider" data-placement="bottom" title="imdb.com">imdb / </div>
+                <div class="movie-yifysubtitles-link provider" data-placement="bottom" title="yifysubtitles.com">yifysubtitles / </div>
+                <div class="movie-googlevideo-link provider" data-placement="bottom" title="cloud src">googlecloud / </div>
+                <div class="movie-youtube-link provider" data-placement="bottom" title="youtube.com">youtube / </div>
+                <div class="movie-tmdb-link provider" data-placement="bottom" title="themoviedb.org">themoviedb / </div>
+                <div class="movie-bh-link provider" data-placement="bottom" title="bithumen.be">bitHUmen / </div>
+            </div>
+	    </div>
     </div>
 
     <div class="bottom-container">
@@ -81,15 +86,13 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
 
 
 	<div class="button dropup" style="text-transform:uppercase;" id="player-chooser"></div>
-	<!- data-placement="left" title="YIFY torrent - best quality at the smallest filesize" 
+	<!-- data-placement="left" title="Torrent - best quality at the smallest filesize"
 	Stream torrent - best quality at the smallest filesize but speed potentially throttled, ISP monitor & limited download bandwidth (by seeders)-->
-
-
-        <!--<div id="watch-googlevideo" class="button" style="text-transform:uppercase;" data-placement="bottom" title="Google Cloud - very fast speed, no ISP monitor & unlimited download bandwidth">Stream</div>--><!-Play via Google Cloud - possibly bad quality but very fast speed, no ISP monitor & unlimited download bandwidth-->
+    <!--<div id="watch-googlevideo" class="button" style="text-transform:uppercase;" data-placement="bottom" title="Google Cloud - very fast speed, no ISP monitor & unlimited download bandwidth">Stream</div>--><!--Play via Google Cloud - possibly bad quality but very fast speed, no ISP monitor & unlimited download bandwidth-->
 
 
 	<div id="watch-trailer" class="button" data-placement="bottom"><%=i18n.__("Watch Trailer") %></div>
-	<!- title="Watch youtube trailer" -->
+	<!-- title="Watch youtube trailer" -->
 
 	<div class="movie-quality-container">
            <% if (torrents["720p"] !== undefined && torrents["1080p"] !== undefined) { %>
