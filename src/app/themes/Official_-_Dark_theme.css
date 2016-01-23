@@ -1736,13 +1736,13 @@ body,
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.85;
   background-color: #000;
 }
 #disclaimer-container .disclaimer .disclaimer-state {
   z-index: 1000;
-  color: #fff;
-  font-family: 'Open Sans Semibold';
+  color: #fefffe;
+  /*font-family: 'Open Sans Semibold';*/
   -webkit-font-smoothing: antialiased;
   text-align: center;
   width: 50%;
@@ -1762,18 +1762,19 @@ body,
   text-transform: uppercase;
 }
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text {
+  line-height: 1.3em;
   font-size: 14px;
   margin: 20px;
   overflow: auto;
-  height: 60%;
+  height: auto;
   text-align: left;
   width: 100%;
   background: rgba(0,0,0,0.3);
-  padding: 7px;
+  padding: 10px 10px 30px 10px;
   overflow-x: hidden;
   overflow-y: overlay;
   -webkit-overflow-scrolling: touch;
-  text-transform: uppercase;
+  text-transform: none;
   text-align: justify;
 }
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text::-webkit-scrollbar {
@@ -1805,7 +1806,46 @@ body,
 }
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p {
   padding-right: 5px;
-  line-height: 16px;
+  /*line-height: 16px;*/
+}
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .error_alert {
+  color: #ac2925;
+}
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .success_alert {
+  color: #4cae4c;
+}
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p #dpasskey {
+  border-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  color: rgb(195, 197, 199);
+  cursor: text;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 30px;
+  left: auto;
+  letter-spacing: normal;
+  line-height: 15px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 0px;
+  margin-top: -9px;
+  outline-color: rgb(195, 197, 199);
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 1px;
+  padding-left: 10px;
+  padding-right: 0px;
+  padding-top: 1px;
+  background-color: rgb(57, 59, 61);
+  border-bottom-color: rgb(195, 197, 199);
+  -webkit-appearance: none;
+  border: 0 none #000;
+  -webkit-border-radius: 3px;
 }
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .btn-accept {
   display: inline-block;
@@ -1817,7 +1857,7 @@ body,
   background-image: none;
   border: 1px solid rgba(0,0,0,0);
   white-space: nowrap;
-  padding: 6px 12px;
+  padding: 12px 24px;
   font-size: 16px;
   line-height: 1.428571;
   -webkit-border-radius: 4px;

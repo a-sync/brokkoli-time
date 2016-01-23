@@ -1,7 +1,7 @@
 (function (App) {
     'use strict';
 
-    var SCROLL_MORE = 0.7; // 70% of window height
+    var SCROLL_MORE = 0.8; // 70% of window height
     var NUM_MOVIES_IN_ROW = 7;
     var _this;
 

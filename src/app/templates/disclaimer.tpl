@@ -1,34 +1,30 @@
 <div class="loading-background"></div>
 <div class="disclaimer-loading"></div>
 <img class="icon-disclaimer" src="/src/app/images/icon.png">
+
 <div class="disclaimer-state">
     <div class="disclaimer-content">
-        <h1><%= i18n.__("Terms of Service") %></h1>
+        <h1><%= i18n.__("Kedves Brokkoli Time felhasználó!") %></h1>
         <div class="disclaimer-text">
-            <h2>Your Acceptance</h2>
 
-            <p>By using the 'BROKKOLI TIME' app you signify your agreement to (1) these terms and conditions (the 'Terms of Service').<br><br></p>
+            <h2>Mielőtt le akarsz tölteni egy torrentet, be kell állítanod az azonosító kulcsodat.<br><br></h2>
 
-            <h2>Privacy Policy.</h2>
+            <p><b>Passkey:</b> &nbsp;<input id="dpasskey" type="text" size="50" name="dpasskey" value="<%= App.settings.passkey %>">
+                <span class="success_alert" style="display:none"><%= i18n.__("Saved") %></span>
+                <span class="error_alert" style="display:none"><%= i18n.__("Invalid credentials") %></span>
+            <br><br></p>
 
-            <p>You understand that by using 'BROKKOLI TIME' you may encounter material that you may deem to be offensive, indecent, or objectionable, and that such content may or may not be identified as having explicit material. 'BROKKOLI TIME' will have no liability to you for such material – you agree that your use of 'BROKKOLI TIME' is at your sole risk.<br><br></p>
-            
-            <h2>DISCLAIMERS</h2>
-            
-            <p>YOU EXPRESSLY AGREE THAT YOUR USE OF 'BROKKOLI TIME' IS AT YOUR SOLE RISK. 'BROKKOLI TIME' AND ALL PRODUCTS ARE PROVIDED TO YOU “AS IS” WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. 'BROKKOLI TIME' MAKES ABSOLUTELY NO WARRANTIES WHATSOEVER, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT POSSIBLE UNDER APPLICABLE LAWS, YIFY DISCLAIMS ALL WARRANTIES, EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR OTHER VIOLATIONS OF RIGHTS.<br><br></p>
-            
-            <h2>LIMITATION OF LIABILITY</h2>
+            <p>Ez bennevan a korábban letöltött torrent fájljaidban (a tracker URL-ben), ill. a torrent adatlapon a fájl neve mellett található <b>Letöltés</b> linkben is megtalálod.</p>
+            <p>Ez az azonosító kulcs teszi lehetővé, hogy letöltsd a torrent fájlt közvetlenül az oldalról, bejelentkezés nélkül.<br><br></p>
 
-            <p>'BROKKOLI TIME' IS NOT RESPONSIBLE FOR ANY PROBLEMS OR TECHNICAL MALFUNCTION OF ANY WEBSITE, NETWORK, COMPUTER SYSTEMS, SERVERS, PROVIDERS, COMPUTER EQUIPMENT, OR SOFTWARE, OR FOR ANY FAILURE DUE TO TECHNICAL PROBLEMS OR TRAFFIC CONGESTION ON THE INTERNET OR 'BROKKOLI TIME' OR COMBINATION THEREOF, INCLUDING ANY INJURY OR DAMAGE TO USERS OR TO ANY COMPUTER OR OTHER DEVICE ON OR THROUGH WHICH 'BROKKOLI TIME' IS PROVIDED. UNDER NO CIRCUMSTANCES WILL 'BROKKOLI TIME' BE LIABLE FOR ANY LOSS OR DAMAGE, INCLUDING PERSONAL INJURY OR DEATH, RESULTING FROM YOUR USE OF 'BROKKOLI TIME'.<br><br></p>
-            
-            <h2>SOURCE MATERIAL</h2>
+            <p>Ha megváltozik az oldalon az azonosító kulcsod, akkor a Brokkoli Time beállításaiban is meg kell változtatnod!<br></p>
+            <p><b>Passkey megváltoztatása után mindig indítsd újra a klienst!</b> (F11)<br><br></p>
 
-            <p>ALL MOVIES ARE NOT HOSTED ON ANY SERVER AND ARE STREAMED USING THE P2P BIT TORRENT PROTOCOL. ALL MOVIES ARE PULLED IN FROM OPEN PUBLIC APIS. BY WATCHING A MOVIE WITH THIS APPLICATION YOU MIGHT BE COMMITTING COPYRIGHT VIOLATIONS DEPENDING ON YOUR COUNTRY´S LAWS. WE DO NOT TAKE ANY RESPONSIBILITIES.<br><br></p>
-            
-            <h2>Ability to Accept Terms of Service</h2>
+            <p>A Brokkoli Time a beállításaidban tárolja az azonosító kulcsodat, és nem küldi ki semmilyen API felé. Csupán a torrent linkekben keresi a <i>{PASSKEY}</i> értéket, és kicseréli amikor le akarod tölteni az adott fájlt.<br><br></p>
 
-            <p>By using 'BROKKOLI TIME' or accessing this site you affirm that you are either more than 18 years of age, or an emancipated minor, or possess legal parental or guardian consent, and are fully able and competent to enter into the terms, conditions, obligations, affirmations, representations, and warranties set forth in these Terms of Service, and to abide by and comply with these Terms of Service. In any case, you affirm that you are over the age of 13, as the Service is not intended for children under 13. If you are under 13 years of age, then please do not use the Service. There are lots of other great web sites for you. Talk to your parents about what sites are appropriate for you.</p>
+            <p>JÓ SZÓRAKOZÁST!<br><br><br></p>
         </div>
-        <a class="btn-accept"><%= i18n.__("I Accept") %></a> <a class="btn-close"><%= i18n.__("Leave") %></a>
+        <a id="disclaimer-accept" class="btn-accept"><%= i18n.__("OK") %></a>
+        <!--<a class="btn-close"><%= i18n.__("Leave") %></a>-->
     </div>
 </div>

@@ -298,10 +298,12 @@
                 <input class="settings-checkbox" name="activateTorrentCollection" id="activateTorrentCollection" type="checkbox" <%=(Settings.activateTorrentCollection? "checked='checked'":"")%>>
                 <label class="settings-label" for="activateTorrentCollection"><%= i18n.__("Torrent Collection") %></label>
             </span>
+            <!--
             <span>
                 <input class="settings-checkbox" name="activateFavorites" id="activateFavorites" type="checkbox" <%=(Settings.activateFavorites? "checked='checked'":"")%>>
                 <label class="settings-label" for="activateFavorites"><%= i18n.__("Favorites") %></label>
             </span>
+            -->
 	    <span class="advanced">
                 <input class="settings-checkbox" name="activateWatchlist" id="activateWatchlist" type="checkbox" <%=(Settings.activateWatchlist? "checked='checked'":"")%>>
                 <label class="settings-label" for="activateWatchlist"><%= i18n.__("Watchlist") %></label>

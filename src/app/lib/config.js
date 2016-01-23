@@ -52,6 +52,11 @@
         title, year, rating, peers, seeds, download_count, like_count, date_added
         */
 
+        types_bithu: [
+            'Film/Hun/SD',
+            'Film/Eng/SD'
+        ],
+
         sorters_tv: [
             'popularity',
             'trending',

@@ -124,7 +124,7 @@
 
         if(/^[0-9a-f]{32}$/i.test(Settings.passkey))
         {
-            params.cat = filters.type || 23;//19
+            params.cat = filters.type;
         }
         else
         {

@@ -10,7 +10,30 @@
         </div>
 
         <div class="help-outer">
-            <h2 class="top"><%= i18n.__("What does Popcorn Time offer?") %></h2>
+            <h2 class="top">Letöltés oldalon a kereső használata</h2>
+            <p>Több speciális kifejezést is használhatsz a keresőmezőben. Ezek segítségével gyorsabban rátalalász a keresett tartalomra. Egyszerűen a keresett szó után írod (a keresőmezőbe) vagy akár önmagukban is működnek.<br></p>
+            <p>Ha egyszerre többet szeretnél használni, azt vesszővel (,) elválasztva teheted meg.<br><br></p>
+
+            <h2>Kifejezések listája példákkal</h2>
+            <p>
+                <b>s:3</b> = legalább 3 seeder<br>
+                <b>l:6</b> = legalább 6 leecher<br>
+                <b>meret:<1500</b> = legfeljebb 1500 MiB méretű<br>
+                <b>feltoltve:2009.11.15</b> = 2009.11.15 után feltöltött torrentek<br>
+                <b>lszorzo:0.5</b> = keresés letöltés szorzója alapján<br>
+                <b>fszorzo:4</b> = keresés feltöltés szorzója alapján<br>
+                <b>_</b> =  helyettesít egy akármilyen betűt<br><br>
+            </p>
+            <p>
+                <b>ev:2006</b> = 2006-os vagy újabb film<br>
+                <b>szereplo:Jason Statham</b> = keresés színész/rendező alapján<br>
+                <b>hossz:<100</b> = maximum 100 perces filmek<br>
+                <b>orszag:Francia</b> = francia filmek<br>
+                <b>imdb:7</b> = legalább 7.0-s imdb pontszám<br>
+                <b>tt1055369</b> = keresés imdb azonosító alapján<br><br>
+            </p>
+
+            <h2><%= i18n.__("What does Popcorn Time offer?") %></h2>
             <p><%= i18n.__("With Popcorn Time, you can watch Movies and TV Series really easily. All you have to do is click on one of the covers, then click 'Watch Now'. But your experience is highly customizable:") %>
                 <ul>
                     <li><b><%= i18n.__("Movies") %>:</b> <%= i18n.__("Our Movies collection only contains High-Definition movies, available in 720p and 1080p. To watch a movie, simply open Popcorn Time and navigate through the movies collection, reachable through the 'Movies' tab, in the navigation bar. The default view will show you all movies sorted by popularity, but you can apply your own filters, thanks to the 'Genre' and 'Sort by' filters. Once you have chosen a movie you want to watch, click its cover. Then click 'Watch Now'. Don't forget the popcorn!") %></li>
