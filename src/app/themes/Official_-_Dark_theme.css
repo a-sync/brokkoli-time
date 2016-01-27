@@ -2998,6 +2998,12 @@ body,
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
+#show-file-list
+{
+  font-size: 18px;
+}
+
 /*.movie-detail .content-box .meta-container .overview {
   position: relative;
   height: 55%;

@@ -92,6 +92,8 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
     <!--<div id="watch-googlevideo" class="button" style="text-transform:uppercase;" data-placement="bottom" title="Google Cloud - very fast speed, no ISP monitor & unlimited download bandwidth">Stream</div>--><!--Play via Google Cloud - possibly bad quality but very fast speed, no ISP monitor & unlimited download bandwidth-->
 
 
+	<div id="show-file-list" data-toggle="tooltip" data-placement="top" title="<%=i18n.__("Open file list") %>" class="button" data-placement="bottom"><div class="fa fa-folder-open-o"></div></div>
+
 	<div id="watch-trailer" class="button" data-placement="bottom"><%=i18n.__("Watch Trailer") %></div>
 	<!-- title="Watch youtube trailer" -->
 
@@ -109,7 +111,12 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
                     <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['720p'].size) %>" class="q720">720p</div>
                 <% }else if (torrents["1080p"] !== undefined) { %>
                     <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['1080p'].size) %>" class="q720">1080p</div>
-                <% } else { %>HDRip<% } %> 
+                <% }else if (torrents["HDRip"] !== undefined) { %>
+                    <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['HDRip'].size) %>" class="q720">HDRip</div>
+                <% }else { %>
+                    HDRip
+                <% } %>
+
             <% } %>
         </div>
        

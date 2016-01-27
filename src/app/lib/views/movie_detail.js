@@ -33,7 +33,8 @@
             'click .sub-dropdown': 'toggleDropdown',
             'click .sub-flag-icon': 'closeDropdown',
             'click .playerchoicemenu li a': 'selectPlayer',
-            'click .rating-container': 'switchRating'
+            'click .rating-container': 'switchRating',
+            'click #show-file-list': 'showFileList'
         },
 
         initialize: function () {
@@ -82,7 +83,7 @@
                 document.getElementsByName('switch')[0].checked = true;
             }
 
-            if (!this.model.get('runtime')) {
+            if (!this.model.get('runtime') || this.model.get('runtime') == 0) {
                 $('#runtime').hide();
             }
             if (!this.model.get('synopsis')) {
@@ -226,6 +227,12 @@
                 $('.star-container').removeClass('hidden');
                 AdvSettings.set('ratingStars', true);
             }
+        },
+
+        showFileList: function() {
+            var current = this.model.get('torrents')[this.model.get('quality')].magnet;
+            Settings.droppedMagnet = current;
+            handleTorrent(current);
         },
 
         switchSubtitle: function (lang) {
