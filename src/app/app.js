@@ -124,7 +124,7 @@ if (os.platform() === 'darwin') {
     var nativeMenuBar = new gui.Menu({
         type: 'menubar'
     });
-    nativeMenuBar.createMacBuiltin('Popcorn Time Community', {
+    nativeMenuBar.createMacBuiltin('Brokkoli Time', {
         hideEdit: false,
         hideWindow: true
     });
@@ -411,10 +411,10 @@ var minimizeToTray = function () {
     };
 
     var tray = new gui.Tray({
-        title: 'Popcorn Time',
+        title: 'Brokkoli Time',
         icon: 'src/app/images/icon.png'
     });
-    tray.tooltip = 'Popcorn Time';
+    tray.tooltip = 'Brokkoli Time';
 
     var menu = new gui.Menu();
     menu.append(new gui.MenuItem({
