@@ -2,7 +2,7 @@
   "name": "brokkoli-time",
   "homepage": "http://bigfathead.eu/brokkoli/",
   "main": "app://host/src/app/index.html",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "releaseName": "analfa",
   "private": true,
   "scripts": {
