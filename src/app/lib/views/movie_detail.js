@@ -105,7 +105,7 @@
 
             this.renderHealth();
 
-            $('.star-container,.movie-imdb-link,.q720,input,.magnet-link, #watch-googlevideo, #watch-trailer, #player-chooser, .provider').tooltip({
+            $('.star-container,.movie-imdb-link,.q720,input,.magnet-link,#show-file-list, #watch-googlevideo, #watch-trailer, #player-chooser, .provider').tooltip({
                 html: true
             });
 

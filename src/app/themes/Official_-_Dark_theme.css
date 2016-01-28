@@ -3001,7 +3001,19 @@ body,
 
 #show-file-list
 {
-  font-size: 18px;
+  position: relative;
+  font-size: 14px;
+  float: right;
+  margin-right: 10px;
+  color: #ddd;
+  cursor: pointer;
+
+}
+
+#show-file-list:hover:before
+{
+  content: "\f07c";
+  margin-right: -2px;
 }
 
 /*.movie-detail .content-box .meta-container .overview {

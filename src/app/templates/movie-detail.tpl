@@ -50,9 +50,11 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
                 <div class="number-container hidden"><%= rating %> <em>/10</em></div>
             </div>
 
-	    <!--health, ratio-->
-	    <div data-toggle="tooltip" data-placement="left" title="<%=i18n.__("Health false") %>" class="fa fa-circle health-icon <%= health %>"></div>
-        <div data-toogle="tooltip" data-placement="left" title="<%=i18n.__("Magnet link") %>" class="fa fa-magnet magnet-link"></div>
+            <!--health, ratio-->
+            <div data-toggle="tooltip" data-placement="left" title="<%=i18n.__("Health false") %>" class="fa fa-circle health-icon <%= health %>"></div>
+            <div data-toogle="tooltip" data-placement="left" title="<%=i18n.__("Magnet link") %>" class="fa fa-magnet magnet-link"></div>
+            <!--show file list-->
+            <div data-toggle="tooltip" data-placement="left" title="<%=i18n.__("Open file list") %>" id="show-file-list" class="fa fa-folder"></div>
             
         </div>
 
@@ -92,7 +94,7 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
     <!--<div id="watch-googlevideo" class="button" style="text-transform:uppercase;" data-placement="bottom" title="Google Cloud - very fast speed, no ISP monitor & unlimited download bandwidth">Stream</div>--><!--Play via Google Cloud - possibly bad quality but very fast speed, no ISP monitor & unlimited download bandwidth-->
 
 
-	<div id="show-file-list" data-toggle="tooltip" data-placement="top" title="<%=i18n.__("Open file list") %>" class="button" data-placement="bottom"><div class="fa fa-folder-open"></div></div>
+
 
 	<div id="watch-trailer" class="button" data-placement="bottom"><%=i18n.__("Watch Trailer") %></div>
 	<!-- title="Watch youtube trailer" -->
