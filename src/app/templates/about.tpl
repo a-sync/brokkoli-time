@@ -35,8 +35,9 @@
 		<a href='http://github.com/' data-toggle="tooltip" data-placement="top" title="github.com/" class='links github_icon'></span></a>
 
 		<a href='http://reddit.com/' data-toggle="tooltip" data-placement="top" title="reddit.com/" class='links forum_icon'></span></a>
-        </div>
 -->
+        </div>
+
         <div class="last-line">
             <%= i18n.__("Made with") %> <span style="color:#e74c3c;">&#10084;</span> <%= i18n.__("by a bunch of geeks from All Around The World") %>
         </div>
