@@ -179,7 +179,7 @@
 	"No movies found...": "Nem találhatók filmek...",
 	"Ratio": "Arány",
 	"Health Excellent": "Kiváló állapot",
-	"Health Bad": "rossz állapot",
+	"Health Bad": "Rossz állapot",
 	"Status: Creating Database...": "Állapot: Adatbázis létrehozása...",
 	"Status: Updating database...": "Állapot: Adatbázis frissítése...",
 	"Status: Skipping synchronization TTL not met": "Állapot: Szinkronizálás átugrása, TTL nem felel meg",
