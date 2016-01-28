@@ -58,13 +58,19 @@
     </p>
 <%}else if (typeof torrents !== 'undefined') { %>
     <p id="movie_quality" class="seasons quality" <% if(Settings.moviesShowQuality){ %> style="display: block;" <% } %> >
-        <% q720 = torrents["720p"] !== undefined; q1080 = torrents["1080p"] !== undefined;
+        <%
+        q720 = torrents["720p"] !== undefined;
+        q1080 = torrents["1080p"] !== undefined;
+        q480 = torrents["480p"] !== undefined;
+
         if (q720 && q1080) { %>
             720p/1080p
         <% } else if (q1080) { %>
             1080p
         <% } else if (q720) { %>
             720p
+        <% } else if (q480) { %>
+            480p
         <% } else { %>
             HDRip
         <% } %>

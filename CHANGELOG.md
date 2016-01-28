@@ -1,5 +1,8 @@
 ## Brokkoli Time
 
+##### v1.0.5
+#
+
 ##### v1.0.4
  - fájl lista megjelenítése gomb az adatlapon
  - UI/nyelvi korrekciók

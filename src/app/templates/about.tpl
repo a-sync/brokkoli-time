@@ -26,17 +26,17 @@
         </div>
 
         <div class="icons_social">
-            <a href='http://google.com/' data-toggle="tooltip" data-placement="top" title="google.com" class='links site_icon'></span></a>
+            <a href='http://bigfathead.eu/brokkoli' data-toggle="tooltip" data-placement="top" title="Brokkoli Time" class='links site_icon'></span></a>
 
             <a href='http://twitter.com/BrokkoliTime' data-toggle="tooltip" data-placement="top" title="twitter.com/BrokkoliTime" class='links twitter_icon'></span></a>
-
+<!--
 		<a href='http://facebook.com/' data-toggle="tooltip" data-placement="top" title="facebook.com/" class='links facebook_icon'></span></a>
 
 		<a href='http://github.com/' data-toggle="tooltip" data-placement="top" title="github.com/" class='links github_icon'></span></a>
 
 		<a href='http://reddit.com/' data-toggle="tooltip" data-placement="top" title="reddit.com/" class='links forum_icon'></span></a>
         </div>
-
+-->
         <div class="last-line">
             <%= i18n.__("Made with") %> <span style="color:#e74c3c;">&#10084;</span> <%= i18n.__("by a bunch of geeks from All Around The World") %>
         </div>
