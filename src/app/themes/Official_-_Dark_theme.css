@@ -1808,16 +1808,13 @@ body,
   padding-right: 5px;
   /*line-height: 16px;*/
 }
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .error_alert,
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .error_alert2 {
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .error_alert {
   color: #ac2925;
 }
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .success_alert,
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .success_alert2 {
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .success_alert {
   color: #4cae4c;
 }
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p #dpasskey,
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p #dpasskey2 {
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p #dpasskey {
   border-color: rgb(0, 0, 0);
   box-sizing: border-box;
   color: rgb(195, 197, 199);

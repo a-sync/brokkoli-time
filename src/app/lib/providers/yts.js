@@ -48,7 +48,6 @@
                 torrents: _.reduce(movie.torrents, function (torrents, torrent) {
                 
                 if(torrent.url.indexOf('{PASSKEY}') !== false) torrent.url = torrent.url.replace('{PASSKEY}', Settings.passkey);
-                else if(torrent.url.indexOf('{PASSKEY2}') !== false) torrent.url = torrent.url.replace('{PASSKEY2}', Settings.passkey2);
                 
                     if (torrent.quality !== '3D') {
                         torrents[torrent.quality] = {
@@ -123,7 +122,7 @@
             params.lang = Settings.language;
         }
 
-        if(/^[0-9a-f]{32}$/i.test(Settings.passkey) || /^[0-9a-f]{32}$/i.test(Settings.passkey2))
+        if(/^[0-9a-f]{32}$/i.test(Settings.passkey))
         {
             params.cat = filters.type;
         }

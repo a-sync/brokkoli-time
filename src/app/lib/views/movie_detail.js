@@ -20,6 +20,7 @@
             'click .favourites-toggle': 'toggleFavourite',
             'click .watched-toggle': 'toggleWatched',
             'click .movie-imdb-link': 'openIMDb',
+            /*
             'click .movie-yify-link': 'openYify',
             'click .movie-video2k-link': 'openVideo2k',
             'click .movie-imdbid-link': 'openIMDb',
@@ -27,9 +28,8 @@
             'click .movie-youtube-link': 'openYoutube',
             'click .movie-googlevideo-link': 'openGooglevideo',
             'click .movie-tmdb-link': 'openTmdb',
-            'click .movie-bithumen-link': 'openBithumen',
-            'click .movie-carpathians-link': 'openCarpathians',
             'click .movie-opensubtitles-link': 'openOpensubtitles',
+            */
             'mousedown .magnet-link': 'openMagnet',
             'click .sub-dropdown': 'toggleDropdown',
             'click .sub-flag-icon': 'closeDropdown',
@@ -454,7 +454,10 @@
 
         openIMDb: function () {
             gui.Shell.openExternal('http://www.imdb.com/title/' + this.model.get('imdb_id'));
-        }, openYifysubtitles: function () {
+        },
+
+        /*
+        openYifysubtitles: function () {
             gui.Shell.openExternal('http://www.yifysubtitles.com/movie-imdb/' + this.model.get('imdb_id'));
         }, openYify: function () {
             gui.Shell.openExternal('http://yify.is/index.php/movie/yifi_view/' + this.model.get('slug') + '/' + this.model.get('id'));
@@ -466,13 +469,10 @@
             gui.Shell.openExternal(this.model.get('trailer'));
         }, openTmdb: function () {
             gui.Shell.openExternal('http://www.themoviedb.org/');
-        }, openBithumen: function () {
-            gui.Shell.openExternal('http://bithumen.be/details.php?id=' + this.model.get('id'));
-        }, openCarpathians: function () {
-            gui.Shell.openExternal('http://mycarpathians.net/details.php?id=' + this.model.get('id'));
         }, openOpensubtitles: function () {
             gui.Shell.openExternal('http://opensubtitles.org/');
         },
+        */
         
         openMagnet: function (e) {
             var provider = this.model.get('provider'),

@@ -326,11 +326,6 @@
                 <p><%= i18n.__("Passkey") %></p>
                     <input id="passkey" type="text" size="50" name="passkey" value="<%=Settings.passkey%>">
             </span>
-
-            <span>
-                <p><%= i18n.__("Passkey2") %></p>
-                    <input id="passkey2" type="text" size="50" name="passkey2" value="<%=Settings.passkey2%>">
-            </span>
             
             <span>
                 <p><%= i18n.__("Movie API Endpoint") %></p>

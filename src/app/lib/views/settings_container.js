@@ -131,13 +131,15 @@
             var value = [{
                 url: 'http://bigfathead.eu/kukorica/',
                 strictSSL: true
-            }, {
+            }
+            /*, {
                 url: 'http://yify.is/index.php/',
                 strictSSL: true
             }, {
                 url: 'https://yts.ag/',
                 strictSSL: true
-            }];
+            }*/
+            ];
             App.settings['ytsAPI'] = value;
             //save to db
             App.db.writeSetting({
@@ -282,7 +284,6 @@
                     value = field.val();
                     break;
                 case 'passkey':
-                case 'passkey2':
                 case 'connectionLimit':
                 case 'dhtLimit':
                 case 'streamPort':

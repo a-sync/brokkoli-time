@@ -9,7 +9,5 @@
 </nav>
 <h1>
     Brokkoli Time
-    <img class="header-icon" src="/src/app/images/icons/icon-bh.png">
-    <img class="header-icon" src="/src/app/images/icons/icon-c.png">
     <div class="events img-<%= events() %>">
 </h1>

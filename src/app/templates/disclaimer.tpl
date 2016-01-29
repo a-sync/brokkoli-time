@@ -12,14 +12,7 @@
             <p id="dpasskey-box"><b><%= i18n.__("Passkey") %>:</b> &nbsp;<input id="dpasskey" type="text" size="50" name="dpasskey" value="<%= App.settings.passkey %>">
                 <span class="success_alert" style="display:none"><%= i18n.__("Saved") %></span>
                 <span class="error_alert" style="display:none"><%= i18n.__("Invalid credentials") %></span>
-                <br>
-            </p>
-
-            <p id="dpasskey2-box"><b><%= i18n.__("Passkey2") %>:</b> &nbsp;<input id="dpasskey2" type="text" size="50" name="dpasskey2" value="<%= App.settings.passkey2 %>">
-                <span class="success_alert2" style="display:none"><%= i18n.__("Saved") %></span>
-                <span class="error_alert2" style="display:none"><%= i18n.__("Invalid credentials") %></span>
-                <br><br>
-            </p>
+            <br><br></p>
 
             <p>Ez bennevan a korábban letöltött torrent fájljaidban (a tracker URL-ben), ill. a torrent adatlapon a fájl neve mellett található <b>Letöltés</b> linkben is megtalálod.</p>
             <p>Ez az azonosító kulcs teszi lehetővé, hogy letöltsd a torrent fájlt közvetlenül az oldalról, bejelentkezés nélkül.<br><br></p>
@@ -27,7 +20,7 @@
             <p>Ha megváltozik az oldalon az azonosító kulcsod, akkor a Brokkoli Time beállításaiban is meg kell változtatnod!<br></p>
             <p><b>Passkey megváltoztatása után mindig indítsd újra a klienst!</b> (F11)<br><br></p>
 
-            <p>A Brokkoli Time a beállításaidban tárolja az azonosító kulcsodat, és nem küldi ki semmilyen API felé. Csupán a torrent linkekben keresi a <i>{PASSKEY} vagy {PASSKEY2}</i> értéket, és kicseréli amikor le akarod tölteni az adott fájlt.<br><br></p>
+            <p>A Brokkoli Time a beállításaidban tárolja az azonosító kulcsodat, és nem küldi ki semmilyen API felé. Csupán a torrent linkekben keresi a <i>{PASSKEY}</i> értéket, és kicseréli amikor le akarod tölteni az adott fájlt.<br><br></p>
 
             <p>JÓ SZÓRAKOZÁST!<br><br><br></p>
         </div>

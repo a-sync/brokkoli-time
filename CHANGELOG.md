@@ -1,5 +1,11 @@
 ## Brokkoli Time ##
 
+ v1.0.5
+ - tracker specifikus elemek eltávolítása
+ - típus váltó általánosítása
+ - startup timeout 10mp
+
+
  v1.0.4
  - fájl lista megjelenítése gomb az adatlapon
  - UI/nyelvi korrekciók

@@ -52,9 +52,9 @@
         title, year, rating, peers, seeds, download_count, like_count, date_added
         */
 
-        types_site: [
-            'bitHUmen',
-            'Carpathians'
+        types_brokkoli: [
+            'Hun',
+            'Eng'
         ],
 
         sorters_tv: [
