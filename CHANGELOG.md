@@ -1,5 +1,9 @@
 ## Brokkoli Time ##
 
+ v1.0.6
+ - torrent collection fix
+ - chromecast frissítés
+
  v1.0.5
  - tracker specifikus elemek eltávolítása
  - típus váltó általánosítása

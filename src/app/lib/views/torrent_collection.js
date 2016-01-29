@@ -79,6 +79,23 @@
             }
         },
 
+        createMagnetURI: function (torrentHash) {
+           var magnet_uri = 'magnet:?xt=urn:btih:';
+           var tracker_list = '&tr=udp:\/\/tracker.coppersurfer.tk:6969'
+               + '&tr=udp:\/\/p4p.arenabg.com:1337'
+               + '&tr=udp:\/\/9.rarbg.me:2710/announce'
+               + '&tr=udp:\/\/glotorrents.pw:6969/announce'
+               + '&tr=udp:\/\/torrent.gresille.org:80/announce'
+               + '&tr=udp:\/\/tracker.internetwarriors.net:1337'
+               + '&tr=udp:\/\/tracker.opentrackr.org:1337/announce'
+               + '&tr=udp:\/\/tracker.leechers-paradise.org:696931622A'
+               + '&tr=udp:\/\/open.demonii.com:1337'
+               + '&tr=udp:\/\/tracker.coppersurfer.tk:6969'
+               + '&tr=udp:\/\/tracker.leechers-paradise.org:6969'
+               + '&tr=udp:\/\/exodus.desync.com:696931622A';
+           return magnet_uri + torrentHash + tracker_list;
+        },
+
         onlineSearch: function (e) {
             if (e) {
                 e.preventDefault();
@@ -160,12 +177,29 @@
             } else {
 
                 var strike = require('strike-api');
+                if (category === 'tv') {
+                    category = 'TV';
+                } else if (category === 'movies') {
+                    category = 'Movies';
+                } else if (category === 'anime') {
+                    category = 'Anime';
+                }
+                
                 strike.search(input, category).then(function (result) {
                     win.debug('Strike search: %s results', result.results);
+                
+                if (result.results === 0) {
+                    throw new Error('Not Found');
+                }
+
+                if (result.statuscode != 200) {
+                    throw new Error(result.statuscode);
+                }
+                
                     result.torrents.forEach(function (item) {
                         var itemModel = {
                             title: item.torrent_title,
-                            magnet: item.magnet_uri,
+                            magnet: (item.torrent_hash!='')?that.createMagnetURI(item.torrent_hash):item.magnet_uri,
                             seeds: item.seeds,
                             peers: item.leeches,
                             size: Common.fileSize(parseInt(item.size)),
@@ -208,6 +242,7 @@
             $('.onlinesearch-info>ul.file-list').append(
                 '<li class="result-item" data-index="' + item.index + '" data-file="' + item.magnet + '"><a>' + item.title + '</a><div class="item-icon magnet-icon tooltipped" data-toogle="tooltip" data-placement="right" title="' + i18n.__('Magnet link') + '"></div><i class="online-size tooltipped" data-toggle="tooltip" data-placement="left" title="' + i18n.__('Ratio:') + ' ' + ratio.toFixed(2) + '<br>' + i18n.__('Seeds:') + ' ' + item.seeds + ' - ' + i18n.__('Peers:') + ' ' + item.peers + '">' + item.size + '</i></li>'
             );
+            
             if (item.seeds === 0) { // recalc the peers/seeds
                 var torrent = item.magnet.split('&tr')[0] + '&tr=udp://tracker.openbittorrent.com:80/announce' + '&tr=udp://open.demonii.com:1337/announce' + '&tr=udp://tracker.coppersurfer.tk:6969';
                 require('torrent-tracker-health')(torrent, {
@@ -401,7 +436,7 @@
                     dataTransfer: {
                         files: [file]
                     },
-                    preventDefault: function () {}
+                    preventDefault: function () { }
                 });
             }, false);
 
