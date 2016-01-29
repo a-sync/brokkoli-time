@@ -427,7 +427,7 @@
                     </span>
                 <% } else { %>
                     <span>
-                        <%= i18n.__("Connect to %s to automatically 'scrobble' episodes you watch in %s", "Trakt.tv", "Popcorn Time") %>
+                        <%= i18n.__("Connect to %s to automatically 'scrobble' episodes you watch in %s", "Trakt.tv", "Brokkoli Time") %>
                     </span>
                     <span>
                         <div class="btn-settings syncTrakt" id="authTrakt">
