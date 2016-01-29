@@ -96,6 +96,7 @@ Settings.vpnUsername = '';
 Settings.vpnPassword = '';
 
 Settings.passkey = '{PASSKEY}';
+Settings.passkey2 = '{PASSKEY2}';
 
 Settings.tvAPI = [{
     url: 'https://popcorntime.ws/api/eztv/',

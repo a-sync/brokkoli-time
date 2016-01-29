@@ -67,15 +67,16 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
 
             <div class="movie-providers-list" style="height: 20px; color:#666; font-size:11px;">
                 <div id="resources" style="float:left; margin-right:5px;"><%=i18n.__("Provider:") %> </div>
-                <div class="movie-yify-link provider" data-placement="bottom" title="yify.is">yts / </div>
-                <div class="movie-video2k-link provider" data-placement="bottom" title="video2k.is">video2k / </div>
+                <!--<div class="movie-yify-link provider" data-placement="bottom" title="yify.is">yts / </div>
+                <div class="movie-video2k-link provider" data-placement="bottom" title="video2k.is">video2k / </div>-->
                 <div class="movie-imdbid-link provider" data-placement="bottom" title="imdb.com">imdb / </div>
                 <div class="movie-yifysubtitles-link provider" data-placement="bottom" title="yifysubtitles.com">yifysubtitles / </div>
                 <div class="movie-opensubtitles-link provider" data-placement="bottom" title="opensubtitles.org">opensubtitles / </div>
                 <div class="movie-googlevideo-link provider" data-placement="bottom" title="cloud src">googlecloud / </div>
                 <div class="movie-youtube-link provider" data-placement="bottom" title="youtube.com">youtube / </div>
                 <div class="movie-tmdb-link provider" data-placement="bottom" title="themoviedb.org">themoviedb / </div>
-                <div class="movie-bh-link provider" data-placement="bottom" title="bithumen.be">bitHUmen </div>
+                <div class="movie-bithumen-link provider" data-placement="bottom" title="bithumen.be">bitHUmen </div>
+                <div class="movie-carpathians-link provider" data-placement="bottom" title="mycarpathians.net">Carpathians </div>
             </div>
 	    </div>
     </div>

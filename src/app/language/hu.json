@@ -511,7 +511,8 @@
 	"kaland": "kaland",
 	"animációs": "animációs",
 	"rejtély": "rejtély",
-	"Passkey": "Passkey",
+	"Passkey": "Passkey (bitHUmen)",
+	"Passkey2": "Passkey (Carpathians)",
 	"Talkshow": "Talkshow",
 	"fantasztikus": "fantasztikus",
 	"sport": "sport",
@@ -529,5 +530,8 @@
 	"Film/Hun/SD": "Film/Hun/SD",
 	"Film/Eng/SD": "Film/Eng/SD",
 	"Kedves Brokkoli Time felhasználó!": "Kedves Brokkoli Time felhasználó!",
-	"Open file list": "Fájl lista megjelenítése"
+	"Open file list": "Fájl lista megjelenítése",
+	"Bithumen": "Bithumen",
+	"bitHUmen": "bitHUmen",
+	"Carpathians": "Carpathians"
 }

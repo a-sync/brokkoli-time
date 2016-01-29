@@ -10,7 +10,7 @@
         </div>
 
         <div class="help-outer">
-            <h2 class="top">Letöltés oldalon a kereső használata</h2>
+            <h2 class="top">Letöltés oldalon a kereső használata (bitHUmen)</h2>
             <p>Több speciális kifejezést is használhatsz a keresőmezőben. Ezek segítségével gyorsabban rátalalász a keresett tartalomra. Egyszerűen a keresett szó után írod (a keresőmezőbe) vagy akár önmagukban is működnek.<br></p>
             <p>Ha egyszerre többet szeretnél használni, azt vesszővel (,) elválasztva teheted meg.<br><br></p>
 

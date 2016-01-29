@@ -282,6 +282,7 @@
                     value = field.val();
                     break;
                 case 'passkey':
+                case 'passkey2':
                 case 'connectionLimit':
                 case 'dhtLimit':
                 case 'streamPort':

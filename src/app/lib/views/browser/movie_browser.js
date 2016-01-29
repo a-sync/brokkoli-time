@@ -6,7 +6,7 @@
         filters: {
             genres: App.Config.genres,
             sorters: App.Config.sorters,
-            types: App.Config.types_bithu
+            types: App.Config.types_site
         }
     });
 
