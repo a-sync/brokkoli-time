@@ -18,6 +18,24 @@
         return _.pluck(items.results, 'imdb_id');
     };
 
+    function createMagnetURI(torrentHash) {
+        var magnet_uri = 'magnet:?xt=urn:btih:';
+        var tracker_list = ''
+            + '&tr=udp:\/\/p4p.arenabg.ch:1337'
+            + '&tr=udp:\/\/9.rarbg.me:2710/announce'
+            + '&tr=udp:\/\/glotorrents.pw:6969/announce'
+            + '&tr=udp:\/\/torrent.gresille.org:80/announce'
+            + '&tr=udp:\/\/tracker.internetwarriors.net:1337'
+            + '&tr=udp:\/\/tracker.opentrackr.org:1337/announce'
+            + '&tr=udp:\/\/tracker.leechers-paradise.org:696931622A'
+            + '&tr=udp:\/\/open.demonii.com:1337'
+            + '&tr=udp:\/\/tracker.coppersurfer.tk:6969'
+            + '&tr=udp:\/\/tracker.leechers-paradise.org:6969'
+            + '&tr=udp:\/\/tracker.openbittorrent.com:80'
+            + '&tr=udp:\/\/exodus.desync.com:696931622A';
+        return magnet_uri + torrentHash + tracker_list;
+    }
+
     var format = function (data) {
         var results = _.chain(data.movies)/*
          .filter(function (movie) {
@@ -52,9 +70,7 @@
                     if (torrent.quality !== '3D') {
                         torrents[torrent.quality] = {
                             url: torrent.url,
-                            magnet: (torrent.hash=='')?torrent.url:'magnet:?xt=urn:btih:' + torrent.hash +
-                            '&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://p4p.arenabg.com:1337&tr=udp://9.rarbg.me:2710/announce&tr=udp://glotorrents.pw:6969/announce' +
-                            '&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.internetwarriors.net:1337&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.leechers-paradise.org:6969',
+                            magnet: (torrent.hash=='')?torrent.url:createMagnetURI(torrent.hash),
                             size: torrent.size_bytes,
                             filesize: torrent.size,
                             seed: torrent.seeds,

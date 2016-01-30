@@ -1,13 +1,12 @@
 ## Brokkoli Time ##
 
- v1.0.6
- - torrent collection fix
- - chromecast frissítés
-
  v1.0.5
- - tracker specifikus elemek eltávolítása
- - típus váltó általánosítása
+ - tracker specifikus elemek eltávolítva
+ - típus váltó általánosítva
  - startup timeout 10mp
+ - torrent gyűjtemény fix
+ - chromecast frissítés + fix
+ - UDP tracker lista frissítve
 
 
  v1.0.4
@@ -16,9 +15,7 @@
 
 
  v1.0.3
- - kategória választó
  - passkey megadási lehetőség első indításnál
- - bH specifikus kereső segédlet a súgóban
 
 
  v1.0.2
@@ -30,4 +27,4 @@
  v1.0.0
  - Első béta!
  - a telepítő a start menübe, és az asztalra tesz ikont
- - program %appdata% könyvtárba kerül, a cache helye állítható a beállításokból
+ - a program az %appdata% könyvtárba kerül, a cache helye állítható a beállításokból

@@ -179,7 +179,7 @@
                         };
                         try {
                             recursive(font_folder);
-                        } catch (e) {}
+                        } catch (e) { };
                         var avail_fonts = ["Arial"];
 
                         for (var i in arr_fonts) {

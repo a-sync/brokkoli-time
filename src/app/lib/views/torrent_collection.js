@@ -81,8 +81,8 @@
 
         createMagnetURI: function (torrentHash) {
            var magnet_uri = 'magnet:?xt=urn:btih:';
-           var tracker_list = '&tr=udp:\/\/tracker.coppersurfer.tk:6969'
-               + '&tr=udp:\/\/p4p.arenabg.com:1337'
+           var tracker_list = ''
+               + '&tr=udp:\/\/p4p.arenabg.ch:1337'
                + '&tr=udp:\/\/9.rarbg.me:2710/announce'
                + '&tr=udp:\/\/glotorrents.pw:6969/announce'
                + '&tr=udp:\/\/torrent.gresille.org:80/announce'
@@ -92,6 +92,7 @@
                + '&tr=udp:\/\/open.demonii.com:1337'
                + '&tr=udp:\/\/tracker.coppersurfer.tk:6969'
                + '&tr=udp:\/\/tracker.leechers-paradise.org:6969'
+               + '&tr=udp:\/\/tracker.openbittorrent.com:80'
                + '&tr=udp:\/\/exodus.desync.com:696931622A';
            return magnet_uri + torrentHash + tracker_list;
         },
