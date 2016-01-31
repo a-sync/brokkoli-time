@@ -22,7 +22,7 @@
 
             <p>A Brokkoli Time a beállításaidban tárolja az azonosító kulcsodat, és nem küldi ki semmilyen API felé. Csupán a torrent linkekben keresi a <i>{PASSKEY}</i> értéket, és kicseréli amikor le akarod tölteni az adott fájlt.<br><br></p>
 
-            <p>JÓ SZÓRAKOZÁST!<br><br><br></p>
+            <p>JÓ SZÓRAKOZÁST!</p>
         </div>
         <a id="disclaimer-accept" class="btn-accept"><%= i18n.__("OK") %></a>
         <!--<a class="btn-close"><%= i18n.__("Leave") %></a>-->

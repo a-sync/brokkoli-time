@@ -36,7 +36,8 @@
 
             var p = App.settings.passkey;
             if(p != currPasskey && /^[0-9a-f]{32}$/i.test(p)) {
-                App.vent.trigger('restartPopcornTime');
+                //App.vent.trigger('restartPopcornTime');
+                App.vent.trigger('movies:list');
             }
         },
 

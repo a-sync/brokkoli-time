@@ -1,5 +1,9 @@
 ## Brokkoli Time ##
 
+ v1.0.6
+ - első indulásnál megjelenő modal UI javítás kis felbontáshoz és passkey megadás után újraindítás helyett lista frissítés
+
+
  v1.0.5
  - tracker specifikus elemek eltávolítva
  - típus váltó általánosítva

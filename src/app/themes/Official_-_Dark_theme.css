@@ -1766,7 +1766,7 @@ body,
   font-size: 14px;
   margin: 20px;
   overflow: auto;
-  height: auto;
+  height: 60%;
   text-align: left;
   width: 100%;
   background: rgba(0,0,0,0.3);
@@ -1775,7 +1775,7 @@ body,
   overflow-y: overlay;
   -webkit-overflow-scrolling: touch;
   text-transform: none;
-  text-align: justify;
+  text-align: left;
 }
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text::-webkit-scrollbar {
   width: 5px;
@@ -1803,6 +1803,7 @@ body,
   padding-bottom: 8px;
   font-size: 16px;
   font-weight: 700;
+  text-align: justify;
 }
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p {
   padding-right: 5px;

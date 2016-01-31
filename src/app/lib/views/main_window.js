@@ -166,7 +166,7 @@
                             if (!err || err.errno === '-4075') {
                                 //success
                             } else {
-                                Settings.tmpLocation = path.join(os.tmpDir(), 'Brokkoli-Time');
+                                Settings.tmpLocation = path.join(os.tmpDir(), 'brokkoli-time-cache');
                                 fs.mkdir(Settings.tmpLocation);
                             }
                         });

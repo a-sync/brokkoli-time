@@ -292,7 +292,7 @@
                     break;
                 case 'tmpLocation':
                     tmpLocationChanged = true;
-                    value = path.join(field.val(), 'Brokkoli-Time');
+                    value = path.join(field.val(), 'brokkoli-time-cache');
                     break;
                 case 'activateVpn':
                     $('.vpn-connect').toggle();
