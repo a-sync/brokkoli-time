@@ -400,6 +400,7 @@
                     App.vent.trigger('movies:list');
                     App.vent.trigger('settings:show');
                     break;
+                case 'passkey':
                 case 'ytsAPI':
                     App.Providers.delete('ytsAPI');
                     App.vent.trigger('movies:list');
