@@ -1,7 +1,10 @@
 ## Brokkoli Time ##
 
  v1.0.6
- - első indulásnál megjelenő modal UI javítás kis felbontáshoz és passkey megadás után újraindítás helyett lista frissítés
+ - első indulásnál megjelenő modal:
+  - UI javítás kis felbontáshoz
+  - passkey megadás után újraindítás helyett lista frissítés
+  - alap quality 1080p (x264)
 
 
  v1.0.5
