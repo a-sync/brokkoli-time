@@ -91,22 +91,23 @@ a img {
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Regular.woff");
-  font-weight: normal;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Open Sans Bold';
-  src: url("../fonts/OpenSans-Bold.woff");
   font-weight: normal;
-  font-style: normal;
+  src: local('Open Sans'), local('OpenSans'), url("../fonts/opensans-400-700-latinext.ttf") format('truetype');
 }
 @font-face {
   font-family: 'Open Sans Semibold';
-  src: url("../fonts/OpenSans-Semibold.woff");
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url("../fonts/opensanssemibold-400-700-latinext.ttf") format('truetype');
 }
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url("../fonts/opensansbold-400-700-latinext.ttf") format('truetype');
+}
+
 @font-face {
   font-family: 'VideoJS';
   src: url("../fonts/vjs.eot");

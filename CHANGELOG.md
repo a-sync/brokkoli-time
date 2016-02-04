@@ -1,11 +1,10 @@
 ## Brokkoli Time ##
 
  v1.0.6
- - első indulásnál megjelenő modal:
-  - UI javítás kis felbontáshoz
-  - passkey megadás után újraindítás helyett lista frissítés
-  - alap quality 1080p (x264)
-
+ - első indításnál UI javítás kis felbontáshoz
+ - passkey megadás után újraindítás helyett lista frissítés
+ - alap quality 1080p (x264), másodlagos 720p (XviD)
+ - magyar ékezeteseket támogató Open Sans
 
  v1.0.5
  - tracker specifikus elemek eltávolítva
