@@ -128,15 +128,19 @@
             var coverUrl = $('.mcover-image').attr('data-cover');
 
             var coverCache = new Image();
-            coverCache.src = coverUrl;
             coverCache.onload = function () {
-                $('.mcover-image').attr('src', coverUrl).addClass('fadein');
-                coverCache = null;
+                if(coverUrl == $('.mcover-image').attr('data-cover')) {
+                    $('.mcover-image').attr('src', coverUrl).addClass('fadein');
+                    coverCache = null;
+                }
             };
             coverCache.onerror = function () {
-                $('.mcover-image').attr('src', this.model.get('image')).addClass('fadein');
-                coverCache = null;
+                if(coverUrl == $('.mcover-image').attr('data-cover')) {
+                    $('.mcover-image').attr('src', this.model.get('image')).addClass('fadein');
+                    coverCache = null;
+                }
             };
+            coverCache.src = coverUrl;
 
             // switch to default subtitle
             this.switchSubtitle(Settings.subtitle_language);
