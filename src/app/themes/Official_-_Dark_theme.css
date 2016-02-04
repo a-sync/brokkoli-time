@@ -2816,8 +2816,9 @@ body,
   width: 100vw;
   height: 100vh;
   position: absolute;
-  opacity: 0.65;
+  opacity: 0.60;
   background-color: #000;
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,.80), rgba(0,0,0,.80), rgba(0,0,0,1));
 }
 .movie-detail .backdrop {
   width: 100vw;
@@ -2859,6 +2860,12 @@ body,
   transition: opacity 0.3s ease-in;
   opacity: 1;
 }
+.movie-detail .poster-box .mcover-image.fadein:active
+{
+  opacity: 0;
+  transition-delay: 400ms;
+  -webkit-transition-delay: 400ms;
+}
 .movie-detail .content-box {
   height: 75vh;
   margin-top: 8vh;
@@ -2876,6 +2883,7 @@ body,
   font-size: 38px;
   font-family: 'Open Sans Semibold';
   -webkit-font-smoothing: antialiased;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.33);
 }
 .movie-detail .content-box .meta-container .metadatas {
   top: 15px;
@@ -2894,6 +2902,7 @@ body,
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .meta-container .metadatas .dot {
   margin: 4px 15px 0px 15px;
@@ -2905,6 +2914,7 @@ body,
   -webkit-border-radius: 2px;
   border-radius: 2px;
   background-color: #dbdbdd;
+  border: 1px solid rgba(0,0,0,0.2);
 }
 .movie-detail .content-box .meta-container .metadatas .movie-imdb-link {
   margin-top: -3px;
@@ -3079,6 +3089,7 @@ body,
   font-size: 12px;
   line-height: 17px;
   margin-right: 20px;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container .favourites-toggle:before {
   content: "\f004";
@@ -3153,6 +3164,7 @@ body,
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
   line-height: 17px;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container .watched-toggle:before {
   content: "\f070";
@@ -3429,6 +3441,8 @@ body,
   text-align: center;
   font-size: 12px;
   line-height: 34px;
+  box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container .button:hover {
   background: #A00000;
@@ -3463,6 +3477,15 @@ body,
 .movie-detail .content-box .bottom-container .movie-quality-container .tooltip {
   width: 85px;
 }
+.movie-detail .content-box .bottom-container .movie-quality-container .q480 {
+  font-family: 'Open Sans Bold';
+  -webkit-font-smoothing: antialiased;
+  font-size: 11px;
+  color: #fff;
+  font-weight: normal;
+  position: absolute;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
 .movie-detail .content-box .bottom-container .movie-quality-container .q720 {
   font-family: 'Open Sans Bold';
   -webkit-font-smoothing: antialiased;
@@ -3470,6 +3493,7 @@ body,
   color: #fff;
   font-weight: normal;
   position: absolute;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container .movie-quality-container .q1080 {
   font-family: 'Open Sans Bold';
@@ -3479,6 +3503,7 @@ body,
   font-weight: normal;
   left: 58px;
   position: absolute;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container .movie-quality-container .switch {
   background: transparent;
@@ -6703,7 +6728,7 @@ div.provider:hover{color:#fff;}
 }
 .movie-detail .content-box .meta-container .overview {
   position: relative;
-height: 70%;
+  height: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
   float: none;
@@ -6721,6 +6746,7 @@ height: 70%;
   overflow-x: hidden;
   overflow-y: overlay;
   -webkit-overflow-scrolling: touch;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container {
   /*be carefull - dependent on .movie-detail .content-box .meta-container*/
@@ -6741,12 +6767,10 @@ height: 110px;
   cursor: pointer;
   padding: 5px;
   padding-right: 13px;
-padding-top: 10px;
+  padding-top: 10px;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .movie-detail .content-box .bottom-container .sub-dropdown.open {
-  /*background-color: rgba(36,104,204,0.6);
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;*/
 }
 .movie-detail .content-box .bottom-container .sub-dropdown .sub-dropdown-arrow {
   width: 0;

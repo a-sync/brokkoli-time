@@ -114,6 +114,8 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
                     <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['720p'].size) %>" class="q720">720p</div>
                 <% }else if (torrents["1080p"] !== undefined) { %>
                     <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['1080p'].size) %>" class="q720">1080p</div>
+                <% }else if (torrents["480p"] !== undefined) { %>
+                    <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['480p'].size) %>" class="q720">480p</div>
                 <% }else if (torrents["HDRip"] !== undefined) { %>
                     <div data-toogle="tooltip" data-placement="top" title="<%= Common.fileSize(torrents['HDRip'].size) %>" class="q720">HDRip</div>
                 <% }else { %>
