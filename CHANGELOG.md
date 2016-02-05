@@ -5,6 +5,8 @@
  - passkey megadás után újraindítás helyett lista frissítés
  - alap quality 1080p (x264), másodlagos 720p (XviD)
  - magyar ékezeteseket támogató Open Sans
+ - vetett árnyék címeken, címkéken
+
 
  v1.0.5
  - tracker specifikus elemek eltávolítva
