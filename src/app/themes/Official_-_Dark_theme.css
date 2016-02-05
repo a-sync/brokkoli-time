@@ -2711,21 +2711,30 @@ body,
   text-overflow: ellipsis;
   white-space: nowrap;
   padding-bottom: 2px;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .item .year {
   font-size: 0.85em;
   color: #5b5b5b;
   display: inline;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .item .seasons {
   font-size: 0.85em;
   color: #5b5b5b;
   display: inline;
   float: right;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 .item .seasons.quality {
   display: none;
 }
+
+.item .movie_quality
+{
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+
 .load-more {
   position: relative;
   -webkit-background-size: cover;
