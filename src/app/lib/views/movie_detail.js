@@ -113,20 +113,22 @@
             App.MovieDetailView = this;
 
             var backgroundUrl = $('.backdrop').attr('data-bgr');
-
             var bgCache = new Image();
-            bgCache.src = backgroundUrl;
             bgCache.onload = function () {
-                $('.backdrop').css('background-image', 'url(' + backgroundUrl + ')').addClass('fadein');
-                bgCache = null;
+                if(backgroundUrl == $('.backdrop').attr('data-bgr')) {
+                    $('.backdrop').css('background-image', 'url(' + backgroundUrl + ')').addClass('fadein');
+                    bgCache = null;
+                }
             };
             bgCache.onerror = function () {
-                $('.backdrop').css('background-image', 'url(images/bg-header.jpg)').addClass('fadein');
-                bgCache = null;
+                if(backgroundUrl == $('.backdrop').attr('data-bgr')) {
+                    $('.backdrop').css('background-image', 'url(images/bg-header.jpg)').addClass('fadein');
+                    bgCache = null;
+                }
             };
+            bgCache.src = backgroundUrl;
 
             var coverUrl = $('.mcover-image').attr('data-cover');
-
             var coverCache = new Image();
             coverCache.onload = function () {
                 if(coverUrl == $('.mcover-image').attr('data-cover')) {
