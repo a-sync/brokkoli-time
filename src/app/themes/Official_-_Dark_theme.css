@@ -5456,7 +5456,7 @@ body,
   height: 30px;
 }
 .torrent-collection-container .content .onlinesearch .online-search {
-  margin-left: 5px;
+  margin-left: 2px;
   cursor: pointer;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
