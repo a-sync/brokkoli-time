@@ -2114,25 +2114,25 @@ body,
   display: none;
 }
 .events.img-newyear {
-  background: URL('../images/events/newyear.png');
+  background: url('../images/events/newyear.png');
   background-repeat: no-repeat;
   -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
 }
 .events.img-pt_anniv {
-  background: URL('../images/events/pt_anniv.png');
+  background: url('../images/events/pt_anniv.png');
   background-repeat: no-repeat;
   -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
 }
 .events.img-halloween {
-  background: URL('../images/events/halloween.png');
+  background: url('../images/events/halloween.png');
   background-repeat: no-repeat;
   -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
 }
 .events.img-stvalentine {
-  background: URL('../images/events/stvalentine.png');
+  background: url('../images/events/stvalentine.png');
   background-repeat: no-repeat;
   -webkit-background-size: 48px 28px;
   background-size: 48px 28px;
@@ -2140,19 +2140,19 @@ body,
   height: 28px;
 }
 .events.img-stpatrick {
-  background: URL('../images/events/stpatrick.png');
+  background: url('../images/events/stpatrick.png');
   background-repeat: no-repeat;
   -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
 }
 .events.img-aprilsfool {
-  background: URL('../images/events/aprilsfool.png');
+  background: url('../images/events/aprilsfool.png');
   background-repeat: no-repeat;
   -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
 }
 .events.img-xmas {
-  background: URL('../images/events/xmas.png');
+  background: url('../images/events/xmas.png');
   background-repeat: no-repeat;
   -webkit-background-size: 28px 28px;
   background-size: 28px 28px;
@@ -5829,7 +5829,7 @@ body,
 /* overlay styles, all needed */
 }
 /*.settings-container-contain .settings-container section .title {
-  padding-bottom: 26px;
+  padding-top: 26px;
   color: #A00000;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;

@@ -1,5 +1,11 @@
 ## Brokkoli Time ##
 
+ v1.0.7
+ - fájlméretek a fájllistában
+ - kisebb javítások
+ - megszűnt api eltávolítva
+
+
  v1.0.6
  - első indításnál UI javítás kis felbontáshoz
  - passkey megadás után újraindítás helyett lista frissítés

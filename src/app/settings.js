@@ -101,6 +101,9 @@ Settings.tvAPI = [{
     url: 'https://popcorntime.ws/api/eztv/',
     strictSSL: true
 },{
+    url: 'https://eztvapi.ml/',
+    strictSSL: true
+},{
     url: 'https://popcornwvnbg7jev.onion.to/',
     strictSSL: true
 }];
@@ -109,12 +112,13 @@ Settings.ytsAPI = [{
     url: 'http://bigfathead.eu/kukorica/',
     strictSSL: true
 }/*,{
-    url: 'http://yify.is/index.php/',
+    url: 'http://yify.is/',
     strictSSL: true
 },{
     url: 'https://yts.ag/',
     strictSSL: true
-}*/];
+}*/
+];
 
 Settings.updateEndpoint = {
     url: '127.0.0.1',//'https://popcornbxexxf3bu.onion.to/',
