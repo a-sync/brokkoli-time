@@ -4,7 +4,7 @@
 
         <div class="onlinesearch">
             <!--<div class="engine-selector">
-                <div id="strike-icon" data-id="Strike" class="engine-icon"></div>
+                <div id="rarbg-icon" data-id="Rarbg" class="engine-icon"></div>
                 <div id="kat-icon" data-id="KAT" class="engine-icon"></div>
             </div>-->
             <div class="dropdown online-categories">

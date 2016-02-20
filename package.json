@@ -52,7 +52,6 @@
     "sanitizer": "^0.1.2",
     "semver": "^4.3.3",
     "send": "0.12.2",
-    "strike-api": "0.2.0",
     "tar": "^1.0.3",
     "temp": "^0.8.1",
     "torrent-tracker-health": "git+https://github.com/PTCE-Public/torrent-tracker-health.git",

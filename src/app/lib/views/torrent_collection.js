@@ -131,9 +131,9 @@
 
                 var kat = require('kat-api-ce');
                 kat.search({
-                    query: input,
+                    query: input.toLocaleLowerCase(),
                     min_seeds: 5,
-                    category: category
+                    category: category.toLocaleLowerCase()
                 }).then(function (data) {
                     win.debug('KAT search: %s results', data.results.length);
                     data.results.forEach(function (item) {
@@ -146,6 +146,9 @@
                             index: index
                         };
 
+                        if (item.title.match(/trailer/i) !== null && input.match(/trailer/i) === null) {
+                            return;
+                        }
                         that.onlineAddItem(itemModel);
                         index++;
                     });
@@ -160,6 +163,9 @@
                     $('.notorrents-info,.torrents-info').hide();
                     $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
                     $('.onlinesearch-info').show();
+                    if (index === 0) {
+                        $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__('No results found') + '</div>');
+                    }
                 }).catch(function (err) {
                     win.debug('KAT search failed:', err.message);
                     var error;
@@ -175,67 +181,10 @@
                     $('.onlinesearch-info').show();
                 });
 
-            }/* else { // service stopped
-
-                var strike = require('strike-api');
-                if (category === 'tv') {
-                    category = 'TV';
-                } else if (category === 'movies') {
-                    category = 'Movies';
-                } else if (category === 'anime') {
-                    category = 'Anime';
-                }
-                
-                strike.search(input, category).then(function (result) {
-                    win.debug('Strike search: %s results', result.results);
-                
-                if (result.results === 0) {
-                    throw new Error('Not Found');
-                }
-
-                if (result.statuscode != 200) {
-                    throw new Error(result.statuscode);
-                }
-                
-                    result.torrents.forEach(function (item) {
-                        var itemModel = {
-                            title: item.torrent_title,
-                            magnet: (item.torrent_hash!='')?that.createMagnetURI(item.torrent_hash):item.magnet_uri,
-                            seeds: item.seeds,
-                            peers: item.leeches,
-                            size: Common.fileSize(parseInt(item.size)),
-                            index: index
-                        };
-
-                        that.onlineAddItem(itemModel);
-                        index++;
-                    });
-
-                    that.$('.tooltipped').tooltip({
-                        html: true,
-                        delay: {
-                            'show': 50,
-                            'hide': 50
-                        }
-                    });
-                    $('.notorrents-info,.torrents-info').hide();
-                    $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
-                    $('.onlinesearch-info').show();
-                }).catch(function (err) {
-                    win.debug('Strike search failed:', err.message);
-                    var error;
-                    if (err.message === 'Not Found') {
-                        error = 'No results found';
-                    } else {
-                        error = 'Failed!';
-                    }
-                    $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__(error) + '</div>');
-
-                    $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
-                    $('.notorrents-info,.torrents-info').hide();
-                    $('.onlinesearch-info').show();
-                });
-            }*/
+            }
+            else
+            {
+            }
         },
 
         onlineAddItem: function (item) {
