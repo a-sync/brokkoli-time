@@ -2581,10 +2581,12 @@ body,
 }
 .item .cover {
   background-image: url("../images/posterholder.png");
-  -webkit-background-size: 134px 196px;
-  background-size: 134px 196px;
-  width: 134px;
-  height: 196px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 142px;
+  height: 213px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 10px;

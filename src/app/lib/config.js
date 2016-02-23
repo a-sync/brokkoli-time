@@ -53,8 +53,10 @@
         */
 
         types_brokkoli: [
-            'Hun',
-            'Eng'
+            'Film/Hun/SD',
+            'Film/Eng/SD',
+            'Sorozat/Hun/SD',
+            'Sorozat/Eng/SD'
         ],
 
         sorters_tv: [

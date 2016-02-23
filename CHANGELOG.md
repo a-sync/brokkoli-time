@@ -1,7 +1,7 @@
 ## Brokkoli Time ##
 
  v1.0.7
- - fájlméretek a fájllistában
+ - fájl méretek megjelenítése a fájl listában
  - kisebb javítások
  - megszűnt api eltávolítva
 
