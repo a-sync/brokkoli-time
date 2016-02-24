@@ -5231,7 +5231,7 @@ body,
 }
 .file-selector-container .fakeskan:before {
   content: '\f071';
-  color: $WarningColor;
+  color: firebrick;
   font-family: "fontawesome";
   font-size: 16px;
   padding-right: 8px;

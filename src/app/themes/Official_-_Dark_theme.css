@@ -5469,7 +5469,7 @@ body,
 .torrent-collection-container .content .onlinesearch .dropdown {
   position: absolute;
   margin-top: 9px;
-  margin-left: -88px;
+  margin-left: -93px;
 }
 .torrent-collection-container .content .onlinesearch .dropdown select {
   position: relative;
@@ -5477,7 +5477,7 @@ body,
   border: 0 !important;
   -webkit-appearance: none;
   height: 30px;
-  width: 85px;
+  width: 90px;
   line-height: 25px;
   margin-top: -9px;
   background-color: #393b3d;
@@ -5493,6 +5493,7 @@ body,
   background: #393b3d;
   border: 0 !important;
   outline: 0;
+  font-family: 'Open Sans';
 }
 .torrent-collection-container .content .onlinesearch .dropdown .dropdown-arrow {
   width: 0;

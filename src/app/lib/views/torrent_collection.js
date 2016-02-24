@@ -184,17 +184,69 @@
             }
             else
             {
+                var rarbg = require('rarbg-api');
+                rarbg.search(input, category).then(function (result) {
+                    console.debug('rarbg search: %s results', result.results.length);
+                    result.results.forEach(function (item) {
+                        var itemModel = {
+                            title: item.title,
+                            magnet: item.torrentLink,
+                            seeds: item.seeds,
+                            peers: item.leechs,
+                            size: Common.fileSize(parseInt(item.size)),
+                            index: index
+                        };
+
+                        if (item.title.match(/trailer/i) !== null && input.match(/trailer/i) === null) {
+                            return;
+                        }
+                        that.onlineAddItem(itemModel);
+                        index++;
+                    });
+
+                    that.$('.tooltipped').tooltip({
+                        html: true,
+                        delay: {
+                            'show': 50,
+                            'hide': 50
+                        }
+                    });
+                    $('.notorrents-info,.torrents-info').hide();
+                    $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
+                    $('.onlinesearch-info').show();
+                    if (index === 0) {
+                        $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__('No results found') + '</div>');
+                    }
+                }).catch(function (err) {
+                    console.debug('rarbg search failed:', err.message || err);
+                    var error;
+                    if (err === 'No torrents found') {
+                        error = 'No results found';
+                    } else if (err && err.match(/bot/i) !== null) {
+                        error = 'RARBG thinks you\'re a bot, check <a class="links" href="https://www.rarbg.com/bot_check.php">https://www.rarbg.com/bot_check.php</a>';
+                    } else if (err === 'There was a problem loading Rarbg') {
+                        error = 'RARBG could not be contacted<br>Please retry or check <a class="links" href="https://www.rarbg.com/">https://rarbg.com/</a>';
+                    } else {
+                        error = 'Failed!';
+                    }
+                    $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__(error) + '</div>');
+
+                    $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
+                    $('.notorrents-info,.torrents-info').hide();
+                    $('.onlinesearch-info').show();
+                });
             }
         },
 
         onlineAddItem: function (item) {
             var ratio = item.peers > 0 ? item.seeds / item.peers : +item.seeds;
+            //console.log(item);
             $('.onlinesearch-info>ul.file-list').append(
                 '<li class="result-item" data-index="' + item.index + '" data-file="' + item.magnet + '"><a>' + item.title + '</a><div class="item-icon magnet-icon tooltipped" data-toogle="tooltip" data-placement="right" title="' + i18n.__('Magnet link') + '"></div><i class="online-size tooltipped" data-toggle="tooltip" data-placement="left" title="' + i18n.__('Ratio:') + ' ' + ratio.toFixed(2) + '<br>' + i18n.__('Seeds:') + ' ' + item.seeds + ' - ' + i18n.__('Peers:') + ' ' + item.peers + '">' + item.size + '</i></li>'
             );
             
-            if (item.seeds === 0) { // recalc the peers/seeds
-                var torrent = item.magnet.split('&tr')[0] + '&tr=udp://tracker.openbittorrent.com:80/announce' + '&tr=udp://open.demonii.com:1337/announce' + '&tr=udp://tracker.coppersurfer.tk:6969';
+            if (item.seeds === 0 && item.magnet.indexOf('magnet:') === 0) { // recalc the peers/seeds
+                var torrent = item.magnet.split('&tr')[0] + '&tr=udp://tracker.openbittorrent.com:80/announce' + '&tr=udp://9.rarbg.com:2710/announce' + '&tr=udp://tracker.coppersurfer.tk:6969' + '&tr=udp://tracker.publicbt.com:80/announce';
                 require('torrent-tracker-health')(torrent, {
                     timeout: 1000
                 }).then(function (res) {
@@ -207,6 +259,7 @@
 
         onlineOpen: function (e) {
             var file = $(e.currentTarget).context.dataset.file;
+
             Settings.droppedMagnet = file;
             window.handleTorrent(file);
         },

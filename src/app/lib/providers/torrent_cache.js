@@ -51,7 +51,7 @@
                 return 'magnet';
             }
             if (torrent.indexOf('.torrent') !== -1) {
-                if (torrent.indexOf('http://') === 0) {
+                if (torrent.indexOf('http://') === 0 || torrent.indexOf('https://') === 0) {
                     return 'torrenturl';
                 }
                 return 'torrent';

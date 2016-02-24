@@ -1,5 +1,13 @@
 ## Brokkoli Time ##
 
+ v1.0.8
+ - sorozat epizódok a film listában
+ - poszter méret/arány fix
+ - chromecast id generálás fix
+ - RARBG api hozzáadva
+ - https link kezelés
+
+
  v1.0.7
  - fájl méretek megjelenítése a fájl listában
  - kisebb javítások

@@ -559,7 +559,10 @@ $(document).on('paste', function (e) {
 // Pass magnet link as last argument to start stream
 var last_arg = gui.App.argv.pop();
 
-if (last_arg && (last_arg.substring(0, 8) === 'magnet:?' || last_arg.substring(0, 7) === 'http://' || last_arg.endsWith('.torrent'))) {
+if (last_arg && (last_arg.substring(0, 8) === 'magnet:?'
+    || last_arg.substring(0, 7) === 'http://'
+    || last_arg.substring(0, 8) === 'https://'
+    || last_arg.endsWith('.torrent'))) {
     App.vent.on('app:started', function () {
         handleTorrent(last_arg);
     });
