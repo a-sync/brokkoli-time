@@ -36,28 +36,34 @@
         ],
 
         sorters: [
-            //'trending',
             'last added',
-	    	//'last added & google cloud',
-            //'popularity',
-            //'year',
-            //'title',
+            //'last added & google cloud',
+            'trending',
             'rating',
 	    	'seeds',
             'downloads',
-            //'likes',
-		
         ],
         /*
-        title, year, rating, peers, seeds, download_count, like_count, date_added
+        title,
+        year,
+        rating,
+        peers,
+        seeds,
+        download_count,
+        like_count,
+        date_added
+        likes
+        popularity
         */
 
         types_brokkoli: [
-            'Film/Hun/SD',
-            'Film/Eng/SD',
-            'Sorozat/Hun/SD',
-            'Sorozat/Eng/SD'
+            'Hun',
+            'Eng'
         ],
+        /*'Film/Hun/SD',
+         'Film/Eng/SD',
+         'Sorozat/Hun/SD',
+         'Sorozat/Eng/SD'*/
 
         sorters_tv: [
             'popularity',
