@@ -132,13 +132,18 @@
             var coverCache = new Image();
             coverCache.onload = function () {
                 if(coverUrl == $('.mcover-image').attr('data-cover')) {
-                    $('.mcover-image').attr('src', coverUrl).addClass('fadein');
+                    try {
+                        $('.mcover-image').attr('src', coverUrl).addClass('fadein');
+                    } catch (e) {}
                     coverCache = null;
                 }
             };
             coverCache.onerror = function () {
                 if(coverUrl == $('.mcover-image').attr('data-cover')) {
-                    $('.mcover-image').attr('src', this.model.get('image')).addClass('fadein');
+                    try {
+                        if(typeof this.model != 'undefined') $('.mcover-image').attr('src', this.model.get('image'));
+                        $('.mcover-image').addClass('fadein');
+                    } catch (e) {}
                     coverCache = null;
                 }
             };

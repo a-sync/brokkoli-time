@@ -24,12 +24,12 @@ Settings.postersJump = [142, 162, 182, 202, 222, 242, 262, 282, 302, 322, 342];
 
 //Playback
 Settings.alwaysFullscreen = false;
-Settings.playNextEpisodeAuto = true;
+Settings.playNextEpisodeAuto = false;
 Settings.chosenPlayer = 'local';
 
 // Advanced UI
 Settings.alwaysOnTop = false;
-Settings.theme = 'Official_-_Dark_theme';
+Settings.theme = 'Brokkoli_-_Dark_theme';
 Settings.ratingStars = false; //trigger on click in details
 Settings.startScreen = 'Movies';
 Settings.lastTab = '';
@@ -74,12 +74,12 @@ Settings.tmpLocation = path.join(os.tmpDir(), 'brokkoli-time-cache');
 Settings.databaseLocation = path.join(data_path, 'data');
 Settings.deleteTmpOnClose = true;
 Settings.automaticUpdating = false;
-Settings.events = false;
+Settings.events = true;
 Settings.minimizeToTray = true;
 Settings.bigPicture = false;
 
 // Features
-Settings.activateTorrentCollection = false;
+Settings.activateTorrentCollection = true;
 Settings.activateWatchlist = false;
 Settings.activateFavorites = true;
 Settings.activateVpn = false;

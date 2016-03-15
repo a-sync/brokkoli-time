@@ -1,5 +1,10 @@
 ## Brokkoli Time ##
 
+ v1.0.9
+ - képek betöltésével kapcsolatos hibák kezelése
+ - nem támogatott témák törölve
+
+
  v1.0.8
  - új rendezés: legaktívabbak
  - poszter méret/arány fix

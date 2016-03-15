@@ -50,6 +50,12 @@ var os = require('os');
                     return 'stpatrick';
                 } else if (today === '0401') {
                     return 'aprilsfool';
+                } else if (today === '0315') {
+                    return 'revolution1848';
+                } else if (today === '0820') {
+                    return 'ststephen';
+                } else if (today === '1023') {
+                    return 'revolution1956';
                 }
             }
         },
