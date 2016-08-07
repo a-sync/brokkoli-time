@@ -1,4 +1,9 @@
 ## Brokkoli Time ##
+ v1.0.10
+ - KAT API helyett 1337x API
+ - mágnes link kódolási hiba tolerálása
+ - új API backup domain
+
 
  v1.0.9
  - képek betöltésével kapcsolatos hibák kezelése
