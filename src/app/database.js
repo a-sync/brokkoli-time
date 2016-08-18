@@ -12,7 +12,7 @@ async = require('async'),
 var startupTime = window.performance.now();
 console.debug('Database path: ' + data_path);
 
-process.env.TZ = 'America/New_York'; // set same api tz
+process.env.TZ = 'Europe/Budapest'; // set same api tz
 
 db.bookmarks = new Datastore({
     filename: path.join(data_path, 'data/bookmarks.db'),
@@ -403,7 +403,7 @@ var Database = {
                         Settings[data[key].key] = data[key].value;
                     }
                 } else {
-                    win.warn('is it possible to get here');
+                    win.warn('Unable to get settings');
                 }
 
                 // new install?

@@ -91,6 +91,7 @@
                 $('.store-torrent').hide();
                 return false;
             } else if (Settings.droppedMagnet && Settings.droppedMagnet.indexOf('\&dn=') === -1) {
+                //TODO: fix by adding it with prompt
                 $('.store-torrent').text(i18n.__('Cannot be stored'));
                 $('.store-torrent').addClass('disabled').prop('disabled', true);
                 win.warn('Magnet lacks Display Name, unable to store it');
