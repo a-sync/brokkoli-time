@@ -43,8 +43,16 @@
                 _this.closeSelector(e);
             });
 
-            App.Device.Collection.setDevice(Settings.chosenPlayer);
+            if(AdvSettings.get('chosenPlayer')=='googlecloud') {
+                App.Device.Collection.setDevice('local');
+            } else {
+                App.Device.Collection.setDevice(Settings.chosenPlayer);
+            }
+
             App.Device.ChooserView('#player-chooser2').render();
+
+            $('#player-chooser2 #player-googlecloud').hide();
+
             this.$('#watch-now').text('');
         },
 

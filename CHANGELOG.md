@@ -1,8 +1,11 @@
 ## Brokkoli Time ##
+
  v1.0.10
- - KAT API helyett 1337x API
- - mágnes link kódolási hiba tolerálása
+
  - új API backup domain
+ - Chromecast 2 fix
+
+ - kisebb javítások
 
 
  v1.0.9

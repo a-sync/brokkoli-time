@@ -221,15 +221,15 @@
 
             this.isShowWatched();
 
+            if(AdvSettings.get('chosenPlayer')=='googlecloud') {
+                    App.Device.Collection.setDevice('local');
+            } else {
+                    App.Device.Collection.setDevice(Settings.chosenPlayer);
+            }
 
-	    if(AdvSettings.get('chosenPlayer')=='googlecloud'){
-            	App.Device.Collection.setDevice('local');
-	    }else{
-            	App.Device.Collection.setDevice(Settings.chosenPlayer);
-	    }
             App.Device.ChooserView('#player-chooser').render();
 
-	    $('#player-googlecloud').hide();
+	        $('#player-googlecloud').hide();
         },
 
         selectNextEpisode: function () {
