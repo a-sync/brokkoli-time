@@ -2,10 +2,10 @@
 
  v1.0.10
  - KAT helyett ExtraTorrent API
- - új API backup domain
- - !frissített tracker lista
  - Chromecast 2 fix
- - kisebb javítások
+ - nyílt tracker lista frissítve
+ - cloud player rejtése fájl lista nézetben
+ - új API backup domain
 
 
  v1.0.9

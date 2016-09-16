@@ -81,10 +81,16 @@
             connections: parseInt(Settings.connectionLimit, 10) || 100, // Max amount of peers to be connected to.
             dht: true || 50,
             tracker: true,
-            trackers: [
-                'udp://tracker.openbittorrent.com:80',
-                'udp://tracker.coppersurfer.tk:6969',
-                'udp://open.demonii.com:1337'
+            trackers: [//tracker-list
+                'udp://tracker.opentrackr.org:1337/announce',
+                'udp://explodie.org:6969/announce',
+                'udp://9.rarbg.com:2710/announce',
+                'udp://tracker.leechers-paradise.org:6969/announce',
+                'udp://p4p.arenabg.com:1337/announce',
+                'udp://tracker.aletorrenty.pl:2710/announce',
+                'udp://tracker.internetwarriors.net:1337/announce',
+                'udp://tracker.ex.ua:80/announce',
+                'udp://tracker.zer0day.to:1337/announce'
             ],
             port: parseInt(Settings.streamPort, 10) || 0,
             tmp: App.settings.tmpLocation,

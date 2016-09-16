@@ -20,20 +20,17 @@
 
     function createMagnetURI(torrentHash) {
         var magnet_uri = 'magnet:?xt=urn:btih:';
-        var tracker_list = ''
-            + '&tr=udp://p4p.arenabg.ch:1337'
-            + '&tr=udp://9.rarbg.me:2710/announce'
-            + '&tr=udp://glotorrents.pw:6969/announce'
-            + '&tr=udp://torrent.gresille.org:80/announce'
-            + '&tr=udp://tracker.internetwarriors.net:1337'
+        var tracker_list = ''//tracker-list
+            + '&tr=udp://tracker.coppersurfer.tk:6969/announce'
             + '&tr=udp://tracker.opentrackr.org:1337/announce'
-            + '&tr=udp://tracker.leechers-paradise.org:6969'
-            + '&tr=udp://open.demonii.com:1337'
-            + '&tr=udp://tracker.coppersurfer.tk:6969'
-            + '&tr=udp://tracker.leechers-paradise.org:6969'
-            + '&tr=udp://tracker.openbittorrent.com:80'
-            + '&tr=udp://exodus.desync.com:6969'
-            + '&tr=udp://tracker.yify-torrents.com/announce';
+            + '&tr=udp://explodie.org:6969/announce'
+            + '&tr=udp://9.rarbg.com:2710/announce'
+            + '&tr=udp://tracker.leechers-paradise.org:6969/announce'
+            + '&tr=udp://p4p.arenabg.com:1337/announce'
+            + '&tr=udp://tracker.aletorrenty.pl:2710/announce'
+            + '&tr=udp://tracker.internetwarriors.net:1337/announce'
+            + '&tr=udp://tracker.ex.ua:80/announce'
+            + '&tr=udp://tracker.zer0day.to:1337/announce';
         return magnet_uri + torrentHash + tracker_list;
     }
 

@@ -837,7 +837,17 @@
             if (torrent.substring(0, 8) === 'magnet:?') {
                 // if 'magnet:?' is because TVApi sends back links, not magnets
 
-                torrent = torrent.split('&tr')[0] + '&tr=udp://tracker.openbittorrent.com:80/announce' + '&tr=udp://open.demonii.com:1337/announce' + '&tr=udp://tracker.coppersurfer.tk:6969';
+                torrent = torrent.split('&tr')[0]//tracker-list
+                    + '&tr=udp://tracker.coppersurfer.tk:6969/announce'
+                    + '&tr=udp://tracker.opentrackr.org:1337/announce'
+                    + '&tr=udp://explodie.org:6969/announce'
+                    + '&tr=udp://9.rarbg.com:2710/announce'
+                    + '&tr=udp://tracker.leechers-paradise.org:6969/announce'
+                    + '&tr=udp://p4p.arenabg.com:1337/announce'
+                    + '&tr=udp://tracker.aletorrenty.pl:2710/announce'
+                    + '&tr=udp://tracker.internetwarriors.net:1337/announce'
+                    + '&tr=udp://tracker.ex.ua:80/announce'
+                    + '&tr=udp://tracker.zer0day.to:1337/announce';
 
                 torrentHealth(torrent, {
                     timeout: 1000
