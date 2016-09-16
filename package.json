@@ -2,7 +2,7 @@
   "name": "brokkoli-time",
   "homepage": "http://bigfathead.eu/brokkoli/",
   "main": "app://host/src/app/index.html",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "releaseName": "analfa",
   "private": true,
   "scripts": {
@@ -30,7 +30,7 @@
     "iconv-lite": "^0.4.7",
     "jschardet": "1.1.1",
     "json-rpc2": "^0.8.1",
-    "kat-api-ce": "^0.0.4",
+    "extratorrent-api": "100.0.4",
     "markdown": "~0.5.0",
     "memoizee": "^0.3.8",
     "mkdirp": "*",

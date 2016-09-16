@@ -88,12 +88,12 @@
                + '&tr=udp://torrent.gresille.org:80/announce'
                + '&tr=udp://tracker.internetwarriors.net:1337'
                + '&tr=udp://tracker.opentrackr.org:1337/announce'
-               + '&tr=udp://tracker.leechers-paradise.org:696931622A'
+               + '&tr=udp://tracker.leechers-paradise.org:6969'
                + '&tr=udp://open.demonii.com:1337'
                + '&tr=udp://tracker.coppersurfer.tk:6969'
                + '&tr=udp://tracker.leechers-paradise.org:6969'
                + '&tr=udp://tracker.openbittorrent.com:80'
-               + '&tr=udp://exodus.desync.com:696931622A';
+               + '&tr=udp://exodus.desync.com:6969';
            return magnet_uri + torrentHash + tracker_list;
         },
 
@@ -127,22 +127,29 @@
             
             var index = 0;
 
-            if (this.searchEngine === 'KAT') {
+            if (this.searchEngine === 'ET') {
+                var etDefaults = {
+                    baseUrl: "https://extratorrent.cc",// etmirror.com, etproxy.com, extratorrentonline.com, extratorrentlive.com
+                    timeout: 10 * 1000
+                };
+                const ExtraTorrentAPI = require("extratorrent-api");
+                const extraTorrentAPI = new ExtraTorrentAPI(etDefaults, true);
 
-                var kat = require('kat-api-ce');
-                kat.search({
-                    query: input.toLocaleLowerCase(),
-                    min_seeds: 5,
-                    category: category.toLocaleLowerCase()
-                }).then(function (data) {
-                    win.debug('KAT search: %s results', data.results.length);
+                // Execute an advanced search
+                extraTorrentAPI.search({
+                    with_words: input,
+                    category: category,
+                    seeds_from: 5
+                })
+                .then(function(data){
+                    win.debug('ET search: %s results', data.results.length);
                     data.results.forEach(function (item) {
                         var itemModel = {
                             title: item.title,
-                            magnet: item.magnet,
+                            magnet: item.torrent_link,
                             seeds: item.seeds,
-                            peers: item.peers,
-                            size: Common.fileSize(parseInt(item.size)),
+                            peers: item.leechers,
+                            size: item.size,
                             index: index
                         };
 
@@ -166,10 +173,11 @@
                     if (index === 0) {
                         $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__('No results found') + '</div>');
                     }
-                }).catch(function (err) {
-                    win.debug('KAT search failed:', err.message);
+                })
+                .catch(function(err){
+                    win.debug('ET search failed:', err.message);
                     var error;
-                    if (err.message === 'No results') {
+                    if (err.message.indexOf('No data found') === 0) {
                         error = 'No results found';
                     } else {
                         error = 'Failed!';
@@ -180,13 +188,12 @@
                     $('.notorrents-info,.torrents-info').hide();
                     $('.onlinesearch-info').show();
                 });
-
             }
             else
             {
                 var rarbg = require('rarbg-api');
                 rarbg.search(input, category).then(function (result) {
-                    console.debug('rarbg search: %s results', result.results.length);
+                    win.debug('rarbg search: %s results', result.results.length);
                     result.results.forEach(function (item) {
                         var itemModel = {
                             title: item.title,
@@ -218,7 +225,7 @@
                         $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__('No results found') + '</div>');
                     }
                 }).catch(function (err) {
-                    console.debug('rarbg search failed:', err.message || err);
+                    win.debug('rarbg search failed:', err.message || err);
                     var error;
                     if (err === 'No torrents found') {
                         error = 'No results found';

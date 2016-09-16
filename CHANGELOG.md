@@ -1,10 +1,10 @@
 ## Brokkoli Time ##
 
  v1.0.10
-
+ - KAT helyett ExtraTorrent API
  - új API backup domain
+ - !frissített tracker lista
  - Chromecast 2 fix
-
  - kisebb javítások
 
 

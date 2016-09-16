@@ -5451,8 +5451,8 @@ body,
   -webkit-transition: opacity 0.1s ease-in;
   transition: opacity 0.1s ease-in;
 }
-.torrent-collection-container .content .onlinesearch .engine-selector div#kat-icon {
-  background: url("../images/icons/kickasstorrents.png");
+.torrent-collection-container .content .onlinesearch .engine-selector div#et-icon {
+  background: url("../images/icons/extratorrent.png");
   -webkit-background-size: contain;
   background-size: contain;
 }
