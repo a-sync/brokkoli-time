@@ -1,11 +1,11 @@
 ## Brokkoli Time ##
 
  v1.0.10
- - KAT helyett ExtraTorrent API
+ - KAT helyett ExtraTorrent api
  - Chromecast 2 fix
  - nyílt tracker lista frissítve
  - cloud player rejtése fájl lista nézetben
- - új API backup domain
+ - új api backup domain
 
 
  v1.0.9
