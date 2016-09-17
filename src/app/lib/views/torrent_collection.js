@@ -251,7 +251,18 @@
             );
             
             if (item.seeds === 0 && item.magnet.indexOf('magnet:') === 0) { // recalc the peers/seeds
-                var torrent = item.magnet.split('&tr')[0] + '&tr=udp://tracker.openbittorrent.com:80/announce' + '&tr=udp://9.rarbg.com:2710/announce' + '&tr=udp://tracker.coppersurfer.tk:6969' + '&tr=udp://tracker.publicbt.com:80/announce';
+                var torrent = item.magnet.split('&tr')[0]//tracker-list
+                    + '&tr=udp://tracker.coppersurfer.tk:6969/announce'
+                    + '&tr=udp://tracker.opentrackr.org:1337/announce'
+                    + '&tr=udp://explodie.org:6969/announce'
+                    + '&tr=udp://9.rarbg.com:2710/announce'
+                    + '&tr=udp://tracker.leechers-paradise.org:6969/announce'
+                    + '&tr=udp://p4p.arenabg.com:1337/announce'
+                    + '&tr=udp://tracker.aletorrenty.pl:2710/announce'
+                    + '&tr=udp://tracker.internetwarriors.net:1337/announce'
+                    + '&tr=udp://tracker.ex.ua:80/announce'
+                    + '&tr=udp://tracker.zer0day.to:1337/announce';
+                
                 require('torrent-tracker-health')(torrent, {
                     timeout: 1000
                 }).then(function (res) {

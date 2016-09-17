@@ -84,7 +84,7 @@ Settings.activateWatchlist = false;
 Settings.activateFavorites = true;
 Settings.activateVpn = false;
 Settings.activateRandomize = false;
-Settings.onlineSearchEngine = 'RARBG';
+Settings.onlineSearchEngine = 'ET';
 
 // Ratio
 Settings.totalDownloaded = 0;
