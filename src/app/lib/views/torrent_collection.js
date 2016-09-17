@@ -131,7 +131,7 @@
                     timeout: 10 * 1000
                 };
                 const ExtraTorrentAPI = require("extratorrent-api");
-                const extraTorrentAPI = new ExtraTorrentAPI(etDefaults, true);
+                const extraTorrentAPI = new ExtraTorrentAPI(etDefaults);
 
                 // Execute an advanced search
                 extraTorrentAPI.search({
