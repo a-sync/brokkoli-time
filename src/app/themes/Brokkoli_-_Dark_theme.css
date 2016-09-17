@@ -5477,6 +5477,7 @@ body,
   cursor: text;
   outline: 0 !important;
   height: 30px;
+  max-width: 235px;
 }
 .torrent-collection-container .content .onlinesearch .online-search {
   margin-left: 2px;
