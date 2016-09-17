@@ -1,5 +1,9 @@
 ## Brokkoli Time ##
 
+ v1.0.11
+ - rarbg-api frissítés
+
+
  v1.0.10
  - KAT helyett ExtraTorrent api
  - Chromecast 2 fix
