@@ -82,6 +82,7 @@
             dht: true || 50,
             tracker: true,
             trackers: [//tracker-list
+                'udp://tracker.coppersurfer.tk:6969/announce',
                 'udp://tracker.opentrackr.org:1337/announce',
                 'udp://explodie.org:6969/announce',
                 'udp://9.rarbg.com:2710/announce',
