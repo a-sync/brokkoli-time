@@ -539,5 +539,9 @@
 	"Film/Hun/Sd": "Film/Hun/Sd",
 	"RARBG thinks you're a bot, check <a class=\"links\" href=\"https://www.rarbg.com/bot_check.php\">https://www.rarbg.com/bot_check.php</a>": "A RARBG szervere botnak nézett és blokkolt. Kérlek látogasd meg a <a class=\"links\" href=\"https://www.rarbg.com/bot_check.php\">https://www.rarbg.com/bot_check.php</a> oldalt, hogy felold a blokkolást.",
 	"játékfilm": "játékfilm",
-	"comedy": "comedy"
+	"comedy": "comedy",
+	"misztikus": "misztikus",
+	"animation": "animation",
+	"action": "action",
+	"crime": "crime"
 }

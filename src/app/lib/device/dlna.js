@@ -87,7 +87,7 @@
                         'parentID': '-1',
                         'restricted': '1'
                     })
-                    .ele('dc:title', {}, 'Popcorn Time Video')
+                    .ele('dc:title', {}, 'Brokkoli Time Video')
                     .insertAfter('res', {
                         'protocolInfo': 'http-get:*:video/mp4:*',
                     }, url_video)
