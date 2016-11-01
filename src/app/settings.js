@@ -9,7 +9,7 @@ var Settings = {};
 
 // User interface
 Settings.language = 'hu';
-Settings.translateSynopsis = true;
+Settings.translateSynopsis = false;
 Settings.coversShowRating = true;
 Settings.watchedCovers = 'fade';
 Settings.showAdvancedSettings = false;
@@ -42,7 +42,7 @@ Settings.movies_quality = 'all';
 //Settings.moviesShowGooglecloud = true;
 
 // Subtitles
-Settings.subtitle_language = 'hu';
+Settings.subtitle_language = 'none';
 Settings.subtitle_size = '28px';
 Settings.subtitle_color = '#ffffff';
 Settings.subtitle_decoration = 'Outline';
@@ -98,6 +98,9 @@ Settings.vpnPassword = '';
 Settings.passkey = '{PASSKEY}';
 
 Settings.tvAPI = [{
+    url: 'https://api-fetch.website/tv/',
+    strictSSL: true
+},{
     url: 'https://popcorntime.ws/api/eztv/',
     strictSSL: true
 },{

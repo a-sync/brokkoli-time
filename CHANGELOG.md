@@ -1,10 +1,14 @@
-## Brokkoli Time ##
+# Brokkoli Time
 
- v1.0.11
+## v1.0.12
+ - kisebb frissítések, alap beállítások
+
+
+## v1.0.11
  - rarbg-api frissítés
 
 
- v1.0.10
+## v1.0.10
  - KAT helyett ExtraTorrent api
  - Chromecast 2 fix
  - nyílt tracker lista frissítve
@@ -12,12 +16,12 @@
  - új api backup domain
 
 
- v1.0.9
+## v1.0.9
  - képek betöltésével kapcsolatos hibák kezelése
  - nem támogatott témák törölve
 
 
- v1.0.8
+## v1.0.8
  - új rendezés: legaktívabbak
  - poszter méret/arány fix
  - chromecast id generálás fix
@@ -25,13 +29,13 @@
  - https link kezelés
 
 
- v1.0.7
+## v1.0.7
  - fájl méretek megjelenítése a fájl listában
  - kisebb javítások
  - megszűnt api eltávolítva
 
 
- v1.0.6
+## v1.0.6
  - első indításnál UI javítás kis felbontáshoz
  - passkey megadás után újraindítás helyett lista frissítés
  - alap quality 1080p (x264), másodlagos 720p (XviD)
@@ -39,7 +43,7 @@
  - vetett árnyék címeken, címkéken
 
 
- v1.0.5
+## v1.0.5
  - tracker specifikus elemek eltávolítva
  - típus váltó általánosítva
  - startup timeout 10mp
@@ -48,22 +52,22 @@
  - UDP tracker lista frissítve
 
 
- v1.0.4
+## v1.0.4
  - fájl lista megjelenítése gomb az adatlapon
  - UI/nyelvi korrekciók
 
 
- v1.0.3
+## v1.0.3
  - passkey megadási lehetőség első indításnál
 
 
- v1.0.2
+## v1.0.2
  - UI/nyelvi korrekciók
  - torrent gyűjtemény aloldal és KAT kereső javítva
  - PT vadhajtásokból összegyűjtött javítások
 
 
- v1.0.0
+## v1.0.0
  - Első béta!
  - a telepítő a start menübe, és az asztalra tesz ikont
  - a program az %appdata% könyvtárba kerül, a cache helye állítható a beállításokból
