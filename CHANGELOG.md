@@ -2,7 +2,7 @@
 
 ## v1.0.12
  - kisebb frissítések, alap beállítások
-
+ - külső apik hiányzó adatainak kezelése
 
 ## v1.0.11
  - rarbg-api frissítés

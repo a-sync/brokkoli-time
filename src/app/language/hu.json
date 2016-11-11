@@ -543,5 +543,16 @@
 	"misztikus": "misztikus",
 	"animation": "animation",
 	"action": "action",
-	"crime": "crime"
+	"crime": "crime",
+	"Dráma": "Dráma",
+	"Akció": "Akció",
+	"Krimi": "Krimi",
+	"Vígjáték": "Vígjáték",
+	"Romantikus": "Romantikus",
+	"Háborús": "Háborús",
+	"Animációs": "Animációs",
+	"Családi": "Családi",
+	"Kaland": "Kaland",
+	"Fantasztikus": "Fantasztikus",
+	"Történelmi": "Történelmi"
 }

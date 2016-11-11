@@ -35,13 +35,7 @@
     }
 
     var format = function (data) {
-        var results = _.chain(data.movies)/*
-         .filter(function (movie) {
-         // Filter any 3D only movies
-         return _.any(movie.torrents, function (torrent) {
-         return torrent.quality !== '3D';
-         });
-         })*/.map(function (movie) {
+        var results = _.chain(data.movies).map(function (movie) {
             return {
                 type: 'movie',
                 id: movie.id,
@@ -49,9 +43,9 @@
                 title: movie.title,
                 slug: movie.slug,
                 year: movie.year,
-                genre: movie.genres,
-                directors: movie.directors,
-                cast: movie.cast,
+                genre: movie.genres || [],
+                directors: movie.directors || [],
+                cast: movie.cast || [],
                 rating: movie.rating,
                 runtime: movie.runtime,
                 image: (movie.medium_cover_image)?movie.medium_cover_image:movie.small_cover_image,
