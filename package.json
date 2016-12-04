@@ -30,7 +30,7 @@
     "iconv-lite": "^0.4.7",
     "jschardet": "1.1.1",
     "json-rpc2": "^0.8.1",
-    "extratorrent-api": "100.0.4",
+    "extratorrent-api": "^100.0.8",
     "markdown": "~0.5.0",
     "memoizee": "^0.3.8",
     "mkdirp": "*",

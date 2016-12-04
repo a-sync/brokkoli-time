@@ -3,6 +3,8 @@
 ## v1.0.12
  - kisebb frissítések, alap beállítások
  - külső apik hiányzó adatainak kezelése
+ - extratorrent-api frissítés
+
 
 ## v1.0.11
  - rarbg-api frissítés
