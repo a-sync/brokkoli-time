@@ -126,12 +126,8 @@
             var index = 0;
 
             if (this.searchEngine === 'ET') {
-                var etDefaults = {
-                    baseUrl: "https://extratorrent.cc",// etmirror.com, etproxy.com, extratorrentonline.com, extratorrentlive.com
-                    timeout: 10 * 1000
-                };
                 const ExtraTorrentAPI = require("extratorrent-api");
-                const extraTorrentAPI = new ExtraTorrentAPI({options:etDefaults});
+                const extraTorrentAPI = new ExtraTorrentAPI();
 
                 // Execute an advanced search
                 extraTorrentAPI.search({
