@@ -33,6 +33,7 @@
             }
             this.files = fs.readdirSync(collection);
             this.searchEngine = Settings.onlineSearchEngine;
+            this.rarbgTries = 0;
         },
 
         onShow: function () {
@@ -186,7 +187,7 @@
             else
             {
                 var rarbg = require('rarbg-api');
-                //TODO: retry if first req in session returns 0 results
+                this.rarbgTries++;
                 rarbg.search(input, category).then(function (result) {
                     win.debug('rarbg search: %s results', result.results.length);
                     result.results.forEach(function (item) {
@@ -231,11 +232,18 @@
                     } else {
                         error = 'Failed!';
                     }
-                    $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__(error) + '</div>');
 
-                    $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
-                    $('.notorrents-info,.torrents-info').hide();
-                    $('.onlinesearch-info').show();
+                    if(err === 'No torrents found' && that.rarbgTries === 1) {
+                        win.debug('rarbg search retry');
+                        setTimeout(function(){that.onlineSearch();}, 2000);
+                    }
+                    else {
+                        $('.onlinesearch-info>ul.file-list').html('<br><br><div style="text-align:center;font-size:30px">' + i18n.__(error) + '</div>');
+
+                        $('.online-search').removeClass('fa-spin fa-spinner').addClass('fa-search');
+                        $('.notorrents-info,.torrents-info').hide();
+                        $('.onlinesearch-info').show();
+                    }
                 });
             }
         },

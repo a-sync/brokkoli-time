@@ -1,5 +1,10 @@
 # Brokkoli Time
 
+## v1.0.13
+ - extratorrent-api frissítés
+ - rarbg-api frissítés
+
+
 ## v1.0.12
  - kisebb frissítések, alap beállítások
  - külső apik hiányzó adatainak kezelése
