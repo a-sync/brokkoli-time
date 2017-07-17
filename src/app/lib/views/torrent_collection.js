@@ -126,7 +126,7 @@
 
             var index = 0;
 
-            if (this.searchEngine === 'ET') {
+            /*if (this.searchEngine === 'ET') {
                 const ExtraTorrentAPI = require("extratorrent-api");
                 const extraTorrentAPI = new ExtraTorrentAPI();
 
@@ -183,7 +183,8 @@
                     $('.notorrents-info,.torrents-info').hide();
                     $('.onlinesearch-info').show();
                 });
-            }
+            }*/
+            if(false){}
             else
             {
                 var rarbg = require('rarbg-api');
