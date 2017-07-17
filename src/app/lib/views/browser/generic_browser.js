@@ -17,6 +17,7 @@
             ItemList: '.list-region'
         },
         events: {
+            'click .keyboard': 'showKeyboard',
             'click .retry-button': 'onFilterChange',
             'click .online-search': 'onlineSearch'
         },
@@ -54,6 +55,9 @@
                 }
                 App.vent.trigger('app:started');
             }
+        },
+        showKeyboard: function () {
+            App.vent.trigger('keyboard:toggle');
         },
         onFilterChange: function () {
 
