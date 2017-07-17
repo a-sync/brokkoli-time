@@ -5,7 +5,7 @@
         <div class="onlinesearch">
             <div class="engine-selector">
                 <div id="rarbg-icon" data-id="RARBG" class="engine-icon"></div>
-                <div id="et-icon" data-id="ET" class="engine-icon"></div>
+                <!--<div id="et-icon" data-id="ET" class="engine-icon"></div>-->
             </div>
             <div class="dropdown online-categories">
                     <%
