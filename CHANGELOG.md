@@ -1,5 +1,11 @@
 # Brokkoli Time
 
+## v1.0.14
+ - Torrent tárolása funkció javítva
+ - gyorsbillentyűk gomb a fő ablakon
+ - megszűnt apik eltávolítva
+
+
 ## v1.0.13
  - extratorrent-api frissítés
  - rarbg-api frissítés
