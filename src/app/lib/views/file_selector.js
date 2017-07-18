@@ -98,13 +98,8 @@
             if (!Settings.droppedTorrent && !Settings.droppedMagnet) {
                 $('.store-torrent').hide();
                 return false;
-            } else if (Settings.droppedMagnet && Settings.droppedMagnet.indexOf('\&dn=') === -1) {
-                //TODO: fix by adding it with prompt
-                $('.store-torrent').text(i18n.__('Cannot be stored'));
-                $('.store-torrent').addClass('disabled').prop('disabled', true);
-                win.warn('Magnet lacks Display Name, unable to store it');
-                return false;
             }
+            
             var file, _file;
             if (Settings.droppedTorrent) {
                 file = Settings.droppedTorrent;
@@ -145,8 +140,10 @@
                     win.debug('Torrent Collection: added', file);
                 }
             } else if (Settings.droppedMagnet) {
-                _file = Settings.droppedMagnet,
-                    file = formatMagnet(_file);
+                _file = Settings.droppedMagnet;
+
+                if (Settings.droppedMagnet.indexOf('\&dn=') === -1) file = _file.replace(/\W+/g, '_');
+                else file = formatMagnet(_file);
 
                 if (this.isTorrentStored()) {
                     if (Settings.droppedStoredMagnet) {
