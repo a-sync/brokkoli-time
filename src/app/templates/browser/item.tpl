@@ -9,7 +9,7 @@
         <i class="fa fa-heart actions-favorites tooltipped" data-toggle="tooltip" data-placement="auto bottom" data-delay='{ "show": "800", "hide": "100" }'></i>
         <i class="fa fa-eye actions-watched tooltipped" data-toggle="tooltip" data-placement="auto bottom" data-delay='{ "show": "800", "hide": "100" }'></i>
 
-        <% if(typeof rating !== 'undefined'){
+        <% if(typeof rating !== 'undefined' && rating >= 1) {
         var p_rating = Math.round(rating) / 2;  %>
             <div class="rating" <% if(Settings.coversShowRating){ %> style="display: block;"<% } %> >
                 <div class="rating-stars">
