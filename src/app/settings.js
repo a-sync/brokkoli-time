@@ -115,7 +115,7 @@ Settings.ytsAPI = [{
     url: 'http://bigfathead.eu/kukorica/',
     strictSSL: true
 },{
-    url: 'http://wtfman.xyz/kukorica/',
+    url: 'http://brokkoli.devs.space/kukorica/',
     strictSSL: true
 }/*,{
     url: 'https://yts.ag/',
