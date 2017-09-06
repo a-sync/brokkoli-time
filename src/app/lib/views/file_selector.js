@@ -99,7 +99,7 @@
                 $('.store-torrent').hide();
                 return false;
             }
-            
+
             var file, _file;
             if (Settings.droppedTorrent) {
                 file = Settings.droppedTorrent;
@@ -142,8 +142,9 @@
             } else if (Settings.droppedMagnet) {
                 _file = Settings.droppedMagnet;
 
-                if (Settings.droppedMagnet.indexOf('\&dn=') === -1) file = _file.replace(/\W+/g, '_');
-                else file = formatMagnet(_file);
+                if (_file.substring(0, 8) === 'magnet:?') file = formatMagnet(_file);
+                else file = _file.trim('/').split('/').pop().replace(/\W+/g, '_');
+                if (file == '') file = Date.now();
 
                 if (this.isTorrentStored()) {
                     if (Settings.droppedStoredMagnet) {
