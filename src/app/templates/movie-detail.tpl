@@ -1,8 +1,6 @@
 <%  
 if(typeof backdrop === "undefined"){ backdrop = ""; }; 
 if(typeof synopsis === "undefined"){ synopsis = i18n.__("Synopsis not available."); };
-if(typeof runtime === "undefined"){ runtime = i18n.__("N/A"); };
-if(year == 0){ year = ""; };
 for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
 %>
 
@@ -21,11 +19,17 @@ for(var i = 0; i < genre.length; i++){ genre[i] = i18n.__(genre[i]); };
         <div class="title"><%= title %></div>
 
         <div class="metadatas">
-            <div class="metaitem"><%= year %></div><div class="dot"></div>
+            <% if (year) { %>
+                <div class="metaitem"><%= year %></div><div class="dot"></div>
+            <% }; %>
 
-            <span id="runtime"><div class="metaitem"><%= runtime %> min</div><div class="dot"></div></span>
+            <% if (runtime) { %>
+                <div id="runtime" class="metaitem"><%= runtime %> min</div><div class="dot"></div>
+            <% }; %>
 
-            <div class="metaitem"><%= genre.join(" / ") %></div><div class="dot"></div>
+            <% if (genre && genre.length) { %>
+                <div class="metaitem"><%= genre.join(" / ") %></div><div class="dot"></div>
+            <% }; %>
 
             <div data-toggle="tooltip" data-placement="top" title="<%=i18n.__("Open IMDb page") %>" class="movie-imdb-link"></div><div class="dot"></div>
 
