@@ -17,7 +17,7 @@
                 <span class="error_alert" style="display:none"><%= i18n.__("Invalid credentials") %></span>
             <br><br></p>
 
-            <p>Ez bennevan a korábban letöltött torrent fájljaidban (a tracker URL-ben), ill. a torrent adatlapon a fájl neve mellett található <b>Letöltés</b> linkben is megtalálod.</p>
+            <p>Ez bennevan a korábban letöltött torrent fájljaidban (a tracker URL-ben), ill. a torrent adatlapon található <b>Letöltés</b> linkben is megtalálod.</p>
             <p>Ez az azonosító kulcs teszi lehetővé, hogy letöltsd a torrent fájlt közvetlenül az oldalról, bejelentkezés nélkül.<br><br></p>
 
             <p>Ha megváltozik az oldalon az azonosító kulcsod, akkor a Brokkoli Time beállításaiban is meg kell változtatnod!<br></p>
