@@ -131,12 +131,11 @@
             var value = [{
                 url: 'http://bigfathead.eu/kukorica/',
                 strictSSL: true
-            }
-            /*, {
-                url: 'http://yify.is/',
+            },{
+                url: 'http://kukorica.devs.space/',
                 strictSSL: true
-            }, {
-                url: 'https://yts.ag/',
+            }/*,{
+                url: 'https://movies.api-fetch.website/',
                 strictSSL: true
             }*/
             ];
@@ -154,10 +153,10 @@
 
         resetTVShowAPI: function () {
             var value = [{
-                url: 'https://popcorntime.ws/api/eztv/',
+                url: 'https://api-fetch.website/tv/',
                 strictSSL: true
             }, {
-                url: 'https://popcornwvnbg7jev.onion.to/',
+                url: 'https://popcorntime.ws/api/eztv/',
                 strictSSL: true
             }];
             App.settings['tvAPI'] = value;

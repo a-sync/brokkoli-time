@@ -9,13 +9,13 @@
 
         ui: {
             success_alert: '.success_alert',
-            error_alert: '.error_alert',
+            error_alert: '.error_alert'
         },
 
         events: {
             'click .btn-accept': 'acceptDisclaimer',
             'click .btn-close': 'closeApp',
-            'change #dpasskey': 'savePasskey',
+            'change #dpasskey': 'savePasskey'
         },
 
         onShow: function () {
@@ -30,6 +30,9 @@
 
         acceptDisclaimer: function (e) {
             e.preventDefault();
+
+            that.saveTracker();
+
             Mousetrap.unpause();
             AdvSettings.set('disclaimerAccepted', 1);
             App.vent.trigger('disclaimer:close');
@@ -44,6 +47,20 @@
         closeApp: function (e) {
             e.preventDefault();
             gui.App.quit();
+        },
+
+        saveTracker: function() {
+            var tracker = $('#tracker').val();
+
+            App.settings['ytsAPI'][0].url += tracker+'/';
+            App.settings['ytsAPI'][1].url += tracker+'/';
+
+            App.db.writeSetting({
+                key: 'ytsAPI',
+                value: App.settings['ytsAPI']
+            });
+
+            App.Providers.delete('ytsAPI');
         },
 
         savePasskey: function(e) {

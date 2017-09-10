@@ -1816,7 +1816,40 @@ body,
 #disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p .success_alert {
   color: #4cae4c;
 }
-#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p #dpasskey {
+
+.disclaimer-content #tracker {
+  border-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  color: rgb(195, 197, 199);
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 30px;
+  left: auto;
+  letter-spacing: normal;
+  line-height: 15px;
+  margin-bottom: 0px;
+  margin-left: 13px;
+  margin-right: 0px;
+  margin-top: -9px;
+  outline-color: rgb(195, 197, 199);
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 1px;
+  padding-left: 8px;
+  padding-right: 0px;
+  padding-top: 1px;
+  background-color: rgb(57, 59, 61);
+  border-bottom-color: rgb(195, 197, 199);
+  border: 0 none #000;
+  -webkit-border-radius: 3px;
+}
+
+#disclaimer-container .disclaimer .disclaimer-state .disclaimer-content .disclaimer-text p #dpasskey{
   border-color: rgb(0, 0, 0);
   box-sizing: border-box;
   color: rgb(195, 197, 199);

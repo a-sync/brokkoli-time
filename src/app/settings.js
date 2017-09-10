@@ -115,10 +115,10 @@ Settings.ytsAPI = [{
     url: 'http://bigfathead.eu/kukorica/',
     strictSSL: true
 },{
-    url: 'http://brokkoli.devs.space/kukorica/',
+    url: 'http://kukorica.devs.space/',
     strictSSL: true
 }/*,{
-    url: 'https://yts.ag/',
+    url: 'https://movies.api-fetch.website/',
     strictSSL: true
 }*/
 ];
