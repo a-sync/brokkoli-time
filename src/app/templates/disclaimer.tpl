@@ -9,7 +9,7 @@
 
             <h2>Mielőtt le akarsz tölteni egy torrentet, be kell állítanod az azonosító kulcsodat.<br><br></h2>
 
-            <p id="tracker-box"><b><%= i18n.__("Tracker") %>:</b> &nbsp;<select id="tracker" type="text" size="1" name="tracker"><option>bithu</option><option>ncore</option><option>preto</option></select>
+            <p id="tracker-box"><b><%= i18n.__("Tracker") %>:</b> &nbsp;<select id="tracker" type="text" size="1" name="tracker"><option>bithu</option><option>ncore</option><option>carpat</option></select>
             <br><br></p>
 
             <p id="dpasskey-box"><b><%= i18n.__("Passkey") %>:</b> &nbsp;<input id="dpasskey" type="text" size="50" name="dpasskey" value="<%= App.settings.passkey %>">

@@ -4,6 +4,7 @@
  - tracker / api url választó első indulásnál
  - kisebb fixek
 
+
 ## v1.0.14
  - Torrent tárolása funkció javítva
  - gyorsbillentyűk gomb a fő ablakon
