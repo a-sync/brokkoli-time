@@ -149,17 +149,17 @@
                 timeout: 10000
             };
             var req =  {
-                "url": "http://bigfathead.eu/kukorica/bithu/",
-                "strictSSL": true,
-                "uri": "http://bigfathead.eu/kukorica/bithu/api/v2/list_movies.json",
+                "url": "test1111",
+                //"strictSSL": true,
+                "uri": "http://devs.space/kukorica/api/v2/list_movies.json",
                 "qs": {
                   "sort_by": "date_added",
                   "limit": 50,
                   "page": 1,
                   "cat": "Hun"
                 },
-                "json": true,
-                "timeout": 10000
+                //"json": true,
+                "timeout": 5000
             };
             //var req = jQuery.extend(true, {}, Settings.ytsAPI[index], options);
             console.log('####################### DEBUG1 \n  ',JSON.stringify(req, null, 2));// DEBUG
@@ -168,7 +168,7 @@
                 if (err || res.statusCode >= 400 || (data && !data.data)) {
                     if (err) console.error(err, res); // DEBUG
                     //console.log(Boolean(data.data)); // DEBUG
-                    win.warn('API endpoint \'%s\' failed.', Settings.ytsAPI[index].url);
+                    win.warn('API endpoint \'%s\' failed.', req.url);
                     if (index + 1 >= Settings.ytsAPI.length) {
                         return defer.reject(err || 'Status Code is above 400');
                     } else {
