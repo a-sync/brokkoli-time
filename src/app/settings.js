@@ -114,10 +114,10 @@ Settings.tvAPI = [{
 Settings.ytsAPI = [{
     url: 'http://bigfathead.eu/kukorica/',
     strictSSL: true
-},{
+}/*,{
     url: 'http://kukorica.devs.space/',
     strictSSL: true
-}/*,{
+},{
     url: 'https://movies.api-fetch.website/',
     strictSSL: true
 }*/

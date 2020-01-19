@@ -53,7 +53,7 @@
             var tracker = $('#tracker').val();
 
             App.settings['ytsAPI'][0].url += tracker+'/';
-            App.settings['ytsAPI'][1].url += tracker+'/';
+            //App.settings['ytsAPI'][1].url += tracker+'/';
 
             App.db.writeSetting({
                 key: 'ytsAPI',
